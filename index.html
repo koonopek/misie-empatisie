@@ -4,12 +4,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!--========== BOX ICONS ==========-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+
+    <title>Misie empatisie</title>
 </head>
 
 <body>
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
+    </a>
 
-    <h1>Kocham Milenke ❤️</h1>
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <div class="nav__logo">
+                <img src="assets/img/logo.svg" width="120px" height="60px" alt=""> </img>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Strona główna</a></li>
+                    <li class="nav__item"><a href="#about_us" class="nav__link">O nas</a></li>
+                    <!-- <li class="nav__item"><a href="#offer" class="nav__link">Oferta</a></li> -->
+                    <li class="nav__item"><a href="#decoration" class="nav__link">Opiekunowie</a></li>
+                    <li class="nav__item"><a href="#gallery" class="nav__link">Galeria</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-grid-alt'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+
+
+        <!--========== HOME ==========-->
+        <section class="home" id="home">
+            <div class="send__container bd-container bd-grid">
+                <div class="send__content">
+                    <h1 class="section-title-center send__title">Witamy w świecie pełnym empatii, zrozumienia i
+                        wdzięczności</h1>
+                </div>
+            </div>
+
+            <div class="home__container bd-container bd-grid">
+                <div class="home__img">
+                    <img src="assets/img/zyrafa_home.png" alt="">
+                </div>
+
+                <div class="home__data">
+                    <h1 class="home__title">Misie empatisie</h1>
+                    <p class="home__description">Misie Empatisie to przytulne i kameralne miejsce, gdzie rozmowy
+                        opierają
+                        się na wyrażaniu i
+                        zauważaniu potrzeb oraz uczuć. Uczymy się tutaj obserwować i dostrzegać fakty, pozbywając się
+                        ocen, krytyki i uprzedzeń. Kierujemy się zasadą wzajemnego zrozumienia, szacunku i
+                        współpracy</p>
+                </div>
+            </div>
+        </section>
+
+        <!--========== ABOUT US ==========-->
+        <section class="about_us section bd-container" id="about_us">
+            <div class="about_us__container bd-grid">
+                <div class="about_us__img">
+
+                    <img src="assets/img/mis_about_us.png" alt="">
+                </div>
+
+                <div class="about_us__data">
+                    <h2 class="section-title-center">O nas</h2>
+                    <p class="about_us__description">Misie Empatisie to bliskościowe, niepubliczne przedszkole, w którym
+                        zmieniamy świat ucząc naszych małych przyjaciół
+                        porozumiewania się językiem serca i empatii w naturalny sposób. Skupiamy się na uczuciach i
+                        potrzebach, zarówno własnych
+                        jak i otaczających nas osób. Naszym celem jest, aby każdy przedszkolak nabył umiejętność dawania
+                        prosto z serca. Dążymy
+                        do prawdziwego kontaktu ze sobą i z innymi, opartego na wzajemnym zrozumieniu, szacunku i
+                        współpracy. W rozwiązywaniu
+                        konfliktów nauczyciel jest jedynie mediatorem, nie stającym po żadnej ze stron. Nasz mały
+                        przedszkolny świat pozbawiony
+                        jest ocen, krytyki i wzajemnego obwiniania.
+
+                        Kształtujemy motywację wewnętrzną, ponieważ wychodzimy z założenia, że tylko dzięki niej
+                        jesteśmy w stanie osiągać
+                        prawdziwe i trwałe sukcesy. Sukcesem jest dla nas nie tylko efekt końcowy, ale przede wszystkim
+                        droga, którą pokonujemy,
+                        aby dojść do zaplanowanego celu. Dzięki kameralnej atmosferze mamy szanse na indywidualne
+                        podejście, nawiązanie bliskiej
+                        i szczerej relacji z Maluchami, a dzięki temu zapewnienie im poczucia bezpieczeństwa, które jest
+                        niezwykle istotne na
+                        tym etapie rozwoju.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!--========== Oferta ==========-->
+        <!-- <section class="offer section bd-container" id="offer">
+            <h2 class="section-title">Oferta</h2>
+
+            <div class="offer__container bd-grid">
+                <div class="offer__content">
+                    <img src="assets/img/offer1.png" alt="" class="offer__img">
+                    <h3 class="offer__title">Snow Globe</h3>
+                    <span class="offer__category">offer</span>
+                    <span class="offer__preci">$9.45</span>
+                    <a href="#" class="button offer__button"><i class='bx bx-heart'></i></a>
+                </div>
+
+                <div class="offer__content">
+                    <img src="assets/img/offer2.png" alt="" class="offer__img">
+                    <h3 class="offer__title">Candy</h3>
+                    <span class="offer__category">offer</span>
+                    <span class="offer__preci">$2.52</span>
+                    <a href="#" class="button offer__button"><i class='bx bx-heart'></i></a>
+                </div>
+
+                <div class="offer__content">
+                    <img src="assets/img/offer3.png" alt="" class="offer__img">
+                    <h3 class="offer__title">Angel</h3>
+                    <span class="offer__category">offer</span>
+                    <span class="offer__preci">$13.15</span>
+                    <a href="#" class="button offer__button"><i class='bx bx-heart'></i></a>
+                </div>
+
+                <div class="offer__content">
+                    <img src="assets/img/offer4.png" alt="" class="offer__img">
+                    <h3 class="offer__title">Sphere</h3>
+                    <span class="offer__category">offer</span>
+                    <span class="offer__preci">$4.25</span>
+                    <a href="#" class="button offer__button"><i class='bx bx-heart'></i></a>
+                </div>
+
+                <div class="offer__content">
+                    <img src="assets/img/offer5.png" alt="" class="offer__img">
+                    <h3 class="offer__title">Surprise gift</h3>
+                    <span class="offer__category">offer</span>
+                    <span class="offer__preci">$7.99</span>
+                    <a href="#" class="button offer__button"><i class='bx bx-heart'></i></a>
+                </div>
+            </div>
+        </section> -->
+
+
+        <!--========== DECORATION ==========-->
+        <section class="decoration section bd-container" id="decoration">
+            <h2 class="section-title">Nasi opiekunowie</h2>
+            <div class="decoration__container">
+                <div class="decoration__data">
+                    <div>
+                        <img src="assets/img/milenka_profile.png" alt="" class="decoration__img">
+                    </div>
+                    <div>
+                        <h3 class="decoration__title">Milenka Suchecka</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius iusto distinctio earum,
+                            reiciendis voluptas saepe quis libero corrupti natus maxime in unde modi. Perspiciatis
+                            explicabo dolorem ea. Optio, ex enim.</p>
+                    </div>
+                </div>
+
+                <div class="decoration__data">
+                    <div>
+                        <img src="assets/img/michal_profile.jpg" alt="" class="decoration__img">
+                    </div>
+                    <div>
+                        <h3 class="decoration__title">Michał Konopka</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius iusto distinctio earum,
+                            reiciendis voluptas saepe quis libero corrupti natus maxime in unde modi. Perspiciatis
+                            explicabo dolorem ea. Optio, ex enim.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--========== GALERIA ==========-->
+        <section class="gallery section bd-container" id="gallery">
+            <h2 class="section-title">Nasze widoki</h2>
+
+            <div class="offer__container bd-grid" id="gallery__container">
+                <div class="offer__content" id="offer__content__image__1" data-src="assets/img/gallery_1.webp">
+                    <a href="#" class="button offer__button"><i class='bx bx-fullscreen'></i></a>
+                </div>
+
+                <div class="offer__content" id="offer__content__image__2" data-src="assets/img/gallery_2.webp">
+                    <a href="#" class="button offer__button"><i class='bx bx-fullscreen'></i></a>
+                </div>
+
+                <div class="offer__content" id="offer__content__image__3" data-src="assets/img/gallery_3.jpeg">
+                    <a href="#" class="button offer__button"><i class='bx bx-fullscreen'></i></a>
+                </div>
+
+                <div class="offer__content" id="offer__content__image__4" data-src="assets/img/gallery_4.webp">
+                    <a href="#" class="button offer__button"><i class='bx bx-fullscreen'></i></a>
+                </div>
+
+                <div class="offer__content" id="offer__content__image__5" data-src=" assets/img/gallery_5.jpeg">
+                    <a href="#" class="button offer__button"><i class='bx bx-fullscreen'></i></a>
+                </div>
+
+                <div class="offer__content" id="offer__content__image__6" data-src="assets/img/gallery_6.jpeg">
+                    <a href="#" class="button offer__button"><i class='bx bx-fullscreen'></i></a>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <!--========== KONTAKT ==========-->
+        <section class="contact section bd-container" id="contact">
+            <h2 class="section-title">
+                Kontakt
+            </h2>
+            <div class="contact__container bd-grid">
+                <div class="contact__data">
+                    <img src="assets/img/phone-call.png" alt="" class="contact__img">
+                    <h3 class="contact__title">Dane kontaktowe</h3>
+                    <p class="contact__description">
+                        <!-- <i class='bx bx-phone-call bx-sm'></i> -->
+                        <a class="button button-link" href="tel:6031112298">+48
+                            783
+                            834
+                            365</a> <br>
+                        <!-- <i class='bx bx-mail-send bx-sm'></i> -->
+                        <a class="button button-link"
+                            href="mailto:misie.empatisie@gmail.com">misie.empatisie@gmail.com</a>
+                    </p>
+
+                </div>
+
+                <div class="contact__data">
+                    <img src="assets/img/adres.png" alt="" class="contact__img">
+                    <h3 class="contact__title">Adres</h3>
+                    <p class="contact__description">
+                        <a class="button button-link" target="_blank"
+                            href="https://maps.app.goo.gl/kvfGej6vw7NUkdAj6">Saszerów 31
+                            04-306 Warszawa</a>
+
+                    </p>
+                </div>
+
+                <div class="contact__data">
+                    <img src="assets/img/social-media-2.png" alt="" class="contact__img">
+                    <h3 class="contact__title">Znajdziesz nas tu</h3>
+                    <a class="button button-link" href="mailto:misie.empatisie@gmail.com">Facebook</a>
+                </div>
+            </div>
+
+            <div class="mapa__container bd-grid bd-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78174.82601810676!2d21.033084107531394!3d52.24405001626721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ec8242c1c9ed1%3A0x7b338a81e41b8cae!2sAkademia%20Malucha%20%22EleMeleDutki%22!5e0!3m2!1spl!2spl!4v1706472144308!5m2!1spl!2spl"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer">
+        <p class="footer__copy">&#169; Wszystkie prawa zastrzeżone 2024 | Przedszkole Niepubliczne Misie Empatisie</p>
+    </footer>
 
 </body>
 
