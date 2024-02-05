@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
 @import url("https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css");
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 5rem;
@@ -108,7 +109,7 @@ img {
 
 /*========== CLASS CSS ==========*/
 .section {
-  padding: 4rem 0 2rem;
+  padding: 7rem 0 2rem;
 }
 
 .section-title,
@@ -209,7 +210,7 @@ img {
 
 /* Show menu */
 .show-menu {
-  top: calc(var(--header-height) + 1rem);
+  top: calc(var(--header-height) + 1.5rem);
 }
 
 /* Active menu link */
@@ -353,11 +354,6 @@ img {
   margin-bottom: var(--mb-2);
 }
 
-.about_us__img {
-  width: 280px;
-  justify-self: center;
-}
-
 /*========== DECORATION ==========*/
 .decoration__container {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -472,10 +468,6 @@ img {
 }
 
 /*========== SEND GIFT ==========*/
-.send__title {
-  /* color: #000; */
-}
-
 .send__content {
   font-family: var(--welcome-font);
   justify-self: center;
@@ -495,7 +487,6 @@ img {
 /* For full-screen images on small screens */
 @media screen and (max-width: 359px) {
   .home__img,
-  .about_us__img,
   .send__img {
     width: 100%;
   }
@@ -525,29 +516,25 @@ img {
   }
 
   .section-title-center,
-  .about_us__data,
-  .send__description {
+  .about_us__data {
     text-align: initial;
   }
 
   .home__img,
-  .about_us__img,
   .send__img {
     width: 100%;
   }
+}
 
-  /* .about_us__img{
-    order: -1;
-  } */
+@media screen and (max-width: 567px) {
+  .about_us__img {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
-  }
-
-  .section {
-    padding-top: 7rem;
   }
 
   .nav {
@@ -634,8 +621,7 @@ img {
     width: 469px;
   }
 
-  .home__container,
-  .send__container {
+  .home__container {
     column-gap: 5rem;
   }
 

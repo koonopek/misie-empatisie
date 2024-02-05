@@ -100,10 +100,7 @@ function main() {
         });
 
         lightbox.addFilter('domItemData', (itemData) => {
-
-
             itemData.src = itemData.element.dataset.src
-
             return itemData;
         });
 
