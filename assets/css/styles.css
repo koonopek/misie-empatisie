@@ -375,7 +375,7 @@ img {
   margin-bottom: var(--mb-2);
 }
 
-/*========== about_us ==========*/
+/*========== ABOUT_US ==========*/
 .about_us__data {
   text-align: center;
 }
@@ -419,7 +419,11 @@ img {
   margin-bottom: var(--mb-1);
 }
 
-/*========== ACCESSORIES ==========*/
+.decoration__description {
+  text-align: justify;
+}
+
+/*========== OFFER ==========*/
 .offer__container {
   grid-template-columns: repeat(2, 1fr);
   padding-bottom: 2rem;
@@ -499,6 +503,36 @@ img {
   font-size: 1.25rem;
   padding: 0.5rem 0.625rem;
   border-radius: 1rem 0 1rem 0;
+}
+
+/*========== OFFERING ==========*/
+.offering__container {
+  grid-template-columns: 1fr;
+}
+
+.offering__prices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.offering__circle__month {
+  position: relative;
+}
+
+.offering__description {
+  padding: 2rem;
+}
+
+.offering__circle__month__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: var(--font-bold);
+  color: #fff;
 }
 
 /*========== SEND GIFT ==========*/
@@ -636,7 +670,7 @@ img {
   }
 
   .decoration__data {
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 3fr 9fr;
   }
 
   .home {
@@ -666,4 +700,35 @@ img {
   .about_us__container {
     column-gap: 1rem;
   }
+
+  .offering__container {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .offering__prices {
+    flex-direction: column;
+  }
+}
+
+ul.offering__list {
+  list-style-type: none; /* Removes the default bullet point */
+  padding-left: 0; /* Removes default padding */
+}
+
+ul.offering__list li {
+  position: relative; /* Needed to position the pseudo-element */
+  padding-left: 20px; /* Provides space for the pseudo-element */
+  margin-bottom: 5px; /* Optional: space between the list items */
+  text-align: start;
+}
+
+ul.offering__list li::before {
+  content: ""; /* Pseudo-element content should be empty */
+  position: absolute; /* Positioning relative to the li element */
+  left: 0; /* Aligns the pseudo-element to the left */
+  width: 10px; /* Size of the circle */
+  height: 10px; /* Size of the circle */
+  background-color: #72b250; /* Color of the circle */
+  border-radius: 50%; /* Makes the element a circle */
+  top: 8px;
 }

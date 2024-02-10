@@ -78,15 +78,16 @@ function main() {
            .gallery__content,
            .footer__content,
            .contact__data,
+           .work__data,
            .mapa__container`, {
         origin: 'top',
     })
 
-    sr.reveal(`.about_us__img, .send__content`, {
+    sr.reveal(`.about_us__img, .send__content, .offering__prices`, {
         origin: 'left'
     })
 
-    sr.reveal(`.about_us__data, .send__img`, {
+    sr.reveal(`.about_us__data, .send__img, .offering__description`, {
         origin: 'right'
     })
 
