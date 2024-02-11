@@ -303,6 +303,7 @@ img {
   background: none;
   padding: 0;
   color: var(--first-color-alt);
+  text-decoration: underline;
 }
 
 .button-link:hover {
