@@ -8,11 +8,11 @@
   --header-height: 5rem;
 
   /*========== Colors ==========*/
-  --first-color: #3a781b;
+  --first-color: rgb(58, 120, 27);
   --first-color-alt: #3a781b;
   --first-color-send: #88b57b;
   --title-color: #72b351;
-  --nav-color: #b47129;
+  --nav-color: rgb(180, 113, 41);
   --text-color: #5b5757;
   --text-color-light: #8f8a8a;
   --body-color: #fff;
@@ -440,34 +440,34 @@ img {
 }
 
 #offer__content__image__1 {
-  background-image: url("../img/gallery_1.webp"); /* Link to your image */
+  background-image: url("../img/gallery_1.jpg"); /* Link to your image */
   background-size: cover;
   background-position: center;
 }
 
 #offer__content__image__2 {
-  background-image: url("../img/gallery_2.webp"); /* Link to your image */
+  background-image: url("../img/gallery_2.jpg"); /* Link to your image */
   background-size: cover;
   background-position: center;
 }
 
 #offer__content__image__3 {
-  background-image: url("../img/gallery_3.jpeg"); /* Link to your image */
+  background-image: url("../img/gallery_3.jpg"); /* Link to your image */
   background-size: cover;
   background-position: center;
 }
 #offer__content__image__4 {
-  background-image: url("../img/gallery_4.webp"); /* Link to your image */
+  background-image: url("../img/gallery_4.jpg"); /* Link to your image */
   background-size: cover;
   background-position: center;
 }
 #offer__content__image__5 {
-  background-image: url("../img/gallery_5.jpeg"); /* Link to your image */
+  background-image: url("../img/gallery_5.jpg"); /* Link to your image */
   background-size: cover;
   background-position: center;
 }
 #offer__content__image__6 {
-  background-image: url("../img/gallery_6.jpeg"); /* Link to your image */
+  background-image: url("../img/gallery_6.jpg"); /* Link to your image */
   background-size: cover;
   background-position: center;
 }

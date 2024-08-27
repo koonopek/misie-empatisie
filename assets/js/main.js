@@ -102,6 +102,8 @@ function main() {
 
         lightbox.addFilter('domItemData', (itemData) => {
             itemData.src = itemData.element.dataset.src
+            itemData.width = itemData.element.dataset.pswpWidth
+            itemData.height = itemData.element.dataset.pswpHeight
             return itemData;
         });
 
