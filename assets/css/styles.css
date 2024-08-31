@@ -121,6 +121,20 @@ img {
   margin-bottom: var(--mb-3);
 }
 
+.banner {
+  background-color: #accca4;
+  /* border: 1px solid #5db034; */
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.banner__text {
+  color: #3a781b;
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
 /*========== LAYOUT ==========*/
 .l-main {
   overflow: hidden;
@@ -158,6 +172,8 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .nav__menu {
@@ -733,3 +749,4 @@ ul.offering__list li::before {
   border-radius: 50%; /* Makes the element a circle */
   top: 8px;
 }
+

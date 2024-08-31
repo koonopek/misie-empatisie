@@ -72,8 +72,7 @@ function main() {
         reset: true,
     });
 
-    sr.reveal(`.home__data, .home__img, 
-           .decoration__data,
+    sr.reveal(`.decoration__data,
            .offer__content,
            .gallery__content,
            .footer__content,
@@ -83,7 +82,7 @@ function main() {
         origin: 'top',
     })
 
-    sr.reveal(`.about_us__img, .send__content, .offering__prices`, {
+    sr.reveal(`.about_us__img,  .offering__prices`, {
         origin: 'left'
     })
 
