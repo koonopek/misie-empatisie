@@ -433,6 +433,9 @@ img {
 
 .decoration__title {
   font-size: var(--h3-font-size);
+}
+
+.decoration__subtitle {
   margin-bottom: var(--mb-1);
 }
 
@@ -508,7 +511,6 @@ img {
 
 .offer__category {
   font-size: var(--small-font-size);
-  margin-bottom: var(--mb-1);
   color: var(--text-color-light);
 }
 
