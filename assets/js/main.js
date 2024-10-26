@@ -68,7 +68,6 @@ function main() {
     const sr = ScrollReveal({
         distance: '30px',
         duration: 1800,
-        reset: true,
     });
 
     sr.reveal(`.decoration__data,
