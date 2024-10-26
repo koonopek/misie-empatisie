@@ -1,5 +1,5 @@
-
 window.addEventListener('DOMContentLoaded', main);
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 function main() {
     /*==================== SHOW MENU ====================*/
@@ -66,8 +66,8 @@ function main() {
 
     /*==================== SCROLL REVEAL ANIMATION ====================*/
     const sr = ScrollReveal({
-        distance: '30px',
         duration: 1800,
+        delay: isMobile ? 400 : 100,
     });
 
     sr.reveal(`.decoration__data,
