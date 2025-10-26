@@ -405,6 +405,66 @@ img {
   margin-bottom: var(--mb-2);
 }
 
+/*========== TERAPIA ==========*/
+.terapia__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.terapia__card {
+  background-color: var(--container-color);
+  box-shadow: 0 4px 8px rgba(65, 11, 16, 0.1);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: 0.3s;
+  border-left: 4px solid var(--first-color);
+}
+
+.terapia__card:hover {
+  box-shadow: 0 6px 16px rgba(65, 11, 16, 0.2);
+  transform: translateY(-5px);
+}
+
+.terapia__card--left {
+  margin-right: auto;
+  max-width: 85%;
+}
+
+.terapia__card--right {
+  margin-left: auto;
+  max-width: 85%;
+  border-left: none;
+  border-right: 4px solid var(--first-color);
+}
+
+.terapia__content {
+  width: 100%;
+}
+
+.terapia__title {
+  font-size: var(--h3-font-size);
+  color: var(--first-color-alt);
+  margin-bottom: var(--mb-2);
+  font-weight: var(--font-semi-bold);
+}
+
+.terapia__description {
+  color: var(--text-color);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .terapia__card--left,
+  .terapia__card--right {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
 /*========== DECORATION ==========*/
 .decoration__container {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
