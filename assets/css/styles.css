@@ -638,6 +638,14 @@ img {
   justify-self: center;
 }
 
+.send__subtitle {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  margin-top: var(--mb-1);
+  margin-bottom: var(--mb-2);
+  line-height: 1.6;
+}
+
 /*========== FOOTER ==========*/
 .footer__copy {
   text-align: center;
