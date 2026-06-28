@@ -22,7 +22,7 @@
   --body-font: "Poppins", sans-serif;
   --welcome-font: "Protest Riot", sans-serif;
   --biggest-font-size: 2rem;
-  --h2-font-size: 1.25rem;
+  --h2-font-size: 1.5rem;
   --h3-font-size: 1.125rem;
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
@@ -47,7 +47,7 @@
 @media screen and (min-width: 968px) {
   :root {
     --biggest-font-size: 3rem;
-    --h2-font-size: 1.75rem;
+    --h2-font-size: 2rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
     --small-font-size: 0.875rem;
@@ -110,7 +110,7 @@ img {
 
 /*========== CLASS CSS ==========*/
 .section {
-  padding: 7rem 0 2rem;
+  padding: 4rem 0 2rem;
 }
 
 .section-title,
@@ -457,6 +457,7 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+
   .terapia__card--left,
   .terapia__card--right {
     max-width: 100%;
@@ -499,7 +500,8 @@ img {
 }
 
 .decoration__img {
-  border: 0px solid #000000; /* Black border */
+  border: 0px solid #000000;
+  /* Black border */
   border-radius: 20px;
   width: 200px;
   height: 200px;
@@ -537,34 +539,43 @@ img {
 }
 
 #offer__content__image__1 {
-  background-image: url("../img/gallery_1.jpg"); /* Link to your image */
+  background-image: url("../img/gallery_1.jpg");
+  /* Link to your image */
   background-size: cover;
   background-position: center;
 }
 
 #offer__content__image__2 {
-  background-image: url("../img/gallery_2.jpg"); /* Link to your image */
+  background-image: url("../img/gallery_2.jpg");
+  /* Link to your image */
   background-size: cover;
   background-position: center;
 }
 
 #offer__content__image__3 {
-  background-image: url("../img/gallery_3.jpg"); /* Link to your image */
+  background-image: url("../img/gallery_3.jpg");
+  /* Link to your image */
   background-size: cover;
   background-position: center;
 }
+
 #offer__content__image__4 {
-  background-image: url("../img/gallery_4.jpg"); /* Link to your image */
+  background-image: url("../img/gallery_4.jpg");
+  /* Link to your image */
   background-size: cover;
   background-position: center;
 }
+
 #offer__content__image__5 {
-  background-image: url("../img/gallery_5.jpg"); /* Link to your image */
+  background-image: url("../img/gallery_5.jpg");
+  /* Link to your image */
   background-size: cover;
   background-position: center;
 }
+
 #offer__content__image__6 {
-  background-image: url("../img/gallery_6.jpg"); /* Link to your image */
+  background-image: url("../img/gallery_6.jpg");
+  /* Link to your image */
   background-size: cover;
   background-position: center;
 }
@@ -673,6 +684,7 @@ img {
 
 /* For full-screen images on small screens */
 @media screen and (max-width: 359px) {
+
   .home__img,
   .send__img {
     width: 100%;
@@ -855,25 +867,36 @@ img {
 }
 
 ul.offering__list {
-  list-style-type: none; /* Removes the default bullet point */
-  padding-left: 0; /* Removes default padding */
+  list-style-type: none;
+  /* Removes the default bullet point */
+  padding-left: 0;
+  /* Removes default padding */
 }
 
 ul.offering__list li {
-  position: relative; /* Needed to position the pseudo-element */
-  padding-left: 20px; /* Provides space for the pseudo-element */
-  margin-bottom: 5px; /* Optional: space between the list items */
+  position: relative;
+  /* Needed to position the pseudo-element */
+  padding-left: 20px;
+  /* Provides space for the pseudo-element */
+  margin-bottom: 5px;
+  /* Optional: space between the list items */
   text-align: start;
 }
 
 ul.offering__list li::before {
-  content: ""; /* Pseudo-element content should be empty */
-  position: absolute; /* Positioning relative to the li element */
-  left: 0; /* Aligns the pseudo-element to the left */
-  width: 10px; /* Size of the circle */
-  height: 10px; /* Size of the circle */
-  background-color: #72b250; /* Color of the circle */
-  border-radius: 50%; /* Makes the element a circle */
+  content: "";
+  /* Pseudo-element content should be empty */
+  position: absolute;
+  /* Positioning relative to the li element */
+  left: 0;
+  /* Aligns the pseudo-element to the left */
+  width: 10px;
+  /* Size of the circle */
+  height: 10px;
+  /* Size of the circle */
+  background-color: #72b250;
+  /* Color of the circle */
+  border-radius: 50%;
+  /* Makes the element a circle */
   top: 8px;
 }
-
