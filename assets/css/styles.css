@@ -633,17 +633,31 @@ img {
 }
 
 /*========== SEND GIFT ==========*/
+.send__container {
+  justify-items: center;
+}
+
 .send__content {
   font-family: var(--welcome-font);
-  justify-self: center;
+  width: 100%;
+  text-align: center;
+}
+
+.send__title {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .send__subtitle {
+  display: block;
   font-size: var(--normal-font-size);
-  color: var(--text-color);
+  color: var(--title-color);
+  width: 100%;
   margin-top: var(--mb-1);
   margin-bottom: var(--mb-2);
   line-height: 1.6;
+  text-align: center;
 }
 
 /*========== FOOTER ==========*/
@@ -691,6 +705,11 @@ img {
   .section-title-center,
   .about_us__data {
     text-align: initial;
+  }
+
+  .send__title,
+  .send__subtitle {
+    text-align: center;
   }
 
   .home__img,
