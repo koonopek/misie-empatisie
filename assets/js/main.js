@@ -20,10 +20,34 @@ function main() {
   /*==================== REMOVE MENU MOBILE ====================*/
   const navLink = document.querySelectorAll(".nav__link");
 
-  function linkAction() {
+  function getHeaderOffset() {
+    const header = document.getElementById("header");
+    return (header?.offsetHeight || 0) + 24;
+  }
+
+  function scrollToSection(target) {
+    const targetTop =
+      target.getBoundingClientRect().top + window.pageYOffset - getHeaderOffset();
+
+    window.scrollTo({
+      top: Math.max(targetTop, 0),
+      behavior: "smooth",
+    });
+  }
+
+  function linkAction(event) {
     const navMenu = document.getElementById("nav-menu");
+    const hash = this.getAttribute("href");
+    const target = hash && hash !== "#" ? document.querySelector(hash) : null;
+
     // When we click on each nav__link, we remove the show-menu class
     navMenu?.classList.remove("show-menu");
+
+    if (!target) return;
+
+    event.preventDefault();
+    scrollToSection(target);
+    history.pushState(null, "", hash);
   }
   navLink.forEach((n) => n.addEventListener("click", linkAction));
 
