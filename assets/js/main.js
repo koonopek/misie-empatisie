@@ -38,11 +38,13 @@ function main() {
   function linkAction(event) {
     const navMenu = document.getElementById("nav-menu");
     const hash = this.getAttribute("href");
-    const target = hash && hash !== "#" ? document.querySelector(hash) : null;
 
     // When we click on each nav__link, we remove the show-menu class
     navMenu?.classList.remove("show-menu");
 
+    if (!hash || !hash.startsWith("#") || hash === "#") return;
+
+    const target = document.querySelector(hash);
     if (!target) return;
 
     event.preventDefault();
@@ -61,15 +63,14 @@ function main() {
       const sectionHeight = current.offsetHeight;
       const sectionTop = current.offsetTop - 200;
       const sectionId = current.getAttribute("id");
+      const activeLink = document.querySelector(
+        `.nav__menu a[href="#${sectionId}"]`,
+      );
 
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        document
-          .querySelector(".nav__menu a[href*=" + sectionId + "]")
-          ?.classList.add("active-link");
+        activeLink?.classList.add("active-link");
       } else {
-        document
-          .querySelector(".nav__menu a[href*=" + sectionId + "]")
-          ?.classList.remove("active-link");
+        activeLink?.classList.remove("active-link");
       }
     });
   }
@@ -104,6 +105,8 @@ function main() {
 
   sr.reveal(
     `.decoration__data,
+           .locations__card,
+           .facility__card,
            .offer__content,
            .gallery__content,
            .footer__content,

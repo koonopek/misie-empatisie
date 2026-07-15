@@ -7,7 +7,7 @@
 
   <!-- POPRAWIONY META DESCRIPTION - 165 znaków -->
   <meta name="description"
-    content="Przedszkole i Żłobek Misie Empatisie w Warszawie na Pradze Południe. Bliskościowa opieka oparta na NVC, zdrowe żywienie, indywidualne podejście. Zapisy tel: 606 386 598" />
+    content="Przedszkole i Żłobek Misie Empatisie w Warszawie na Pradze Południe. Dwie placówki: Przeworska i Drwęcka, bliskościowa opieka NVC i zdrowe żywienie. Zapisy tel: 606 386 598" />
 
   <!-- DODANE META KEYWORDS -->
   <meta name="keywords"
@@ -16,7 +16,7 @@
   <!-- DODANE SOCIAL MEDIA META TAGS (Open Graph) -->
   <meta property="og:title" content="Przedszkole i Żłobek Misie Empatisie - Warszawa Praga Południe" />
   <meta property="og:description"
-    content="Bliskościowe przedszkole i żłobek w Warszawie. Opieka oparta na NVC, zdrowe żywienie, indywidualne podejście do każdego dziecka. Zapisy: 606 386 598" />
+    content="Bliskościowe przedszkole i żłobek w Warszawie. Placówki przy ul. Przeworskiej i Drwęckiej, opieka oparta na NVC, zdrowe żywienie i indywidualne podejście. Zapisy: 606 386 598" />
   <meta property="og:image" content="assets/img/misie_empatisie_logo.jpg" />
   <meta property="og:url" content="https://misie-empatisie.pl" />
   <meta property="og:type" content="website" />
@@ -26,7 +26,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Przedszkole i Żłobek Misie Empatisie - Warszawa" />
   <meta name="twitter:description"
-    content="Bliskościowe przedszkole i żłobek w Warszawie na Pradze Południe. NVC, zdrowe żywienie, indywidualne podejście." />
+    content="Bliskościowe przedszkole i żłobek w Warszawie na Pradze Południe. Dwie placówki, NVC, zdrowe żywienie, indywidualne podejście." />
   <meta name="twitter:image" content="assets/img/misie_empatisie_logo.jpg" />
 
   <!--========== BOX ICONS ==========-->
@@ -55,7 +55,7 @@
 
   <!-- POPRAWIONY TITLE Z KLUCZOWYMI SŁOWAMI -->
   <title>
-    Przedszkole i Żłobek Misie Empatisie - Warszawa Praga Południe | NVC i
+    Przedszkole i Żłobek Misie Empatisie - Warszawa Praga Południe | Dwie placówki, NVC i
     Bliskościowa Opieka
   </title>
 
@@ -113,6 +113,30 @@
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61568444164081",
         "https://www.instagram.com/misie_empatisie/"
+      ],
+      "department": [
+        {
+          "@type": "ChildCare",
+          "name": "Misie Empatisie - Przeworska",
+          "url": "https://misie-empatisie.pl/placowka-przeworska.html",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Przeworska 7/U7",
+            "addressLocality": "Warszawa",
+            "addressCountry": "PL"
+          }
+        },
+        {
+          "@type": "ChildCare",
+          "name": "Misie Empatisie - Drwęcka",
+          "url": "https://misie-empatisie.pl/placowka-drwecka.html",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Drwęcka 18/U4",
+            "addressLocality": "Warszawa",
+            "addressCountry": "PL"
+          }
+        }
       ]
     }
   </script>
@@ -129,11 +153,11 @@
   <!--========== HEADER ==========-->
   <header class="l-header" id="header">
     <nav class="nav bd-container">
-      <div class="nav__logo">
+      <a href="#home" class="nav__logo" aria-label="Misie Empatisie - strona główna">
         <!-- POPRAWIONY ALT DLA LOGO -->
         <img src="assets/img/misie_empatisie_logo.jpg" width="85" height="auto"
           alt="Logo Przedszkole i Żłobek Misie Empatisie Warszawa" />
-      </div>
+      </a>
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
           <li class="nav__item">
@@ -148,8 +172,14 @@
           <li class="nav__item">
             <a href="#terapia" class="nav__link">Terapia</a>
           </li>
-          <li class="nav__item">
-            <a href="#decoration" class="nav__link">Opiekunowie</a>
+          <li class="nav__item nav__item--dropdown">
+            <button class="nav__link nav__dropdown-toggle" type="button" aria-expanded="false">
+              Placówki <i class="bx bx-chevron-down"></i>
+            </button>
+            <ul class="nav__dropdown" aria-label="Wybierz placówkę">
+              <li><a href="placowka-przeworska.html" class="nav__dropdown-link">Przeworska</a></li>
+              <li><a href="placowka-drwecka.html" class="nav__dropdown-link">Drwęcka</a></li>
+            </ul>
           </li>
           <li class="nav__item">
             <a href="#gallery" class="nav__link">Galeria</a>
@@ -199,6 +229,38 @@
             zrozumieniu, szacunku i współpracy.
           </p>
         </div>
+      </div>
+    </section>
+
+    <!--========== PLACÓWKI ==========-->
+    <section class="locations section bd-container" id="locations">
+      <h2 class="section-title">Wybierz placówkę</h2>
+      <p class="locations__intro">
+        Każda z naszych placówek ma osobną podstronę z informacjami o kadrze, galerią oraz mapą dojazdu.
+      </p>
+
+      <div class="locations__container bd-grid">
+        <article class="locations__card">
+          <img src="assets/img/misie_empatisie_logo.jpg" width="120" height="120"
+            alt="Logo placówki Misie Empatisie Przeworska" loading="lazy" class="locations__img" />
+          <h3 class="locations__title">Placówka Przeworska</h3>
+          <p class="locations__address">ul. Przeworska 7/U7, Warszawa</p>
+          <p class="locations__description">
+            Obecna placówka Misie Empatisie z pełnymi informacjami o zespole, galerii i dojeździe.
+          </p>
+          <a href="placowka-przeworska.html" class="button locations__button">Zobacz placówkę</a>
+        </article>
+
+        <article class="locations__card">
+          <img src="assets/img/misie_empatisie_logo.jpg" width="120" height="120"
+            alt="Logo placówki Misie Empatisie Drwęcka" loading="lazy" class="locations__img" />
+          <h3 class="locations__title">Placówka Drwęcka</h3>
+          <p class="locations__address">ul. Drwęcka 18/U4, Warszawa</p>
+          <p class="locations__description">
+            Nowa placówka przygotowana w tym samym bliskościowym podejściu, z informacjami o kadrze, galerii i mapie.
+          </p>
+          <a href="placowka-drwecka.html" class="button locations__button">Zobacz placówkę</a>
+        </article>
       </div>
     </section>
 
@@ -695,8 +757,8 @@
             <a class="button button-link" target="_blank" href="https://maps.app.goo.gl/DYRCUcpJGinNbJj2A">Przeworska
               7/U7 04-382 Warszawa</a>
             <br /> oraz <br />
-            <a class="button button-link" target="_blank" href="https://maps.app.goo.gl/Ks4oPvHGaEiGrowP6">Drwęcka 18/U4
-              7/U7 04-382 Warszawa</a>
+            <a class="button button-link" target="_blank" href="https://maps.app.goo.gl/Ks4oPvHGaEiGrowP6">Drwęcka
+              18/U4 Warszawa</a>
           </p>
         </div>
 
