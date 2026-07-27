@@ -262,7 +262,8 @@ img {
 }
 
 .nav__item--dropdown:hover .nav__dropdown,
-.nav__item--dropdown:focus-within .nav__dropdown {
+.nav__item--dropdown:focus-within .nav__dropdown,
+.nav__item--dropdown.show-dropdown .nav__dropdown {
   display: block;
 }
 
@@ -289,12 +290,16 @@ img {
 
 @media screen and (max-width: 768px) {
   .nav__dropdown {
-    display: block;
+    display: none;
     position: static;
     min-width: auto;
     padding: 0.5rem 0 0;
     background-color: transparent;
     box-shadow: none;
+  }
+
+  .nav__item--dropdown.show-dropdown .nav__dropdown {
+    display: block;
   }
 
   .nav__dropdown-link {
