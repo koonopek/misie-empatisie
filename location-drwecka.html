@@ -65,7 +65,7 @@
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="index.html" class="nav__link nav__link--home">Strona główna</a>
+            <a href="index.html" class="nav__link">Strona główna</a>
           </li>
           <li class="nav__item">
             <a href="index.html#about_us" class="nav__link">O nas</a>
@@ -76,11 +76,14 @@
           <li class="nav__item">
             <a href="index.html#terapia" class="nav__link">Terapia</a>
           </li>
-          <li class="nav__item">
-            <a href="location-przeworska.html" class="nav__link">Przeworska</a>
-          </li>
-          <li class="nav__item">
-            <a href="location-drwecka.html" class="nav__link active-link" aria-current="page">Drwęcka</a>
+          <li class="nav__item nav__item--dropdown">
+            <button class="nav__link nav__dropdown-toggle" type="button" aria-expanded="false">
+              Placówki <i class="bx bx-chevron-down"></i>
+            </button>
+            <ul class="nav__dropdown" aria-label="Wybierz placówkę">
+              <li><a href="location-przeworska.html" class="nav__dropdown-link">Przeworska</a></li>
+              <li><a href="location-drwecka.html" class="nav__dropdown-link">Drwęcka</a></li>
+            </ul>
           </li>
           <li class="nav__item">
             <a href="index.html#contact" class="nav__link">Kontakt</a>
