@@ -282,12 +282,6 @@ img {
   background-color: rgba(136, 181, 123, 0.12);
 }
 
-.nav__link--home {
-  padding: 0.5rem 0.9rem;
-  border: 1px solid rgba(180, 113, 41, 0.35);
-  border-radius: 999px;
-}
-
 @media screen and (max-width: 768px) {
   .nav__dropdown {
     display: none;
