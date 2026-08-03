@@ -516,8 +516,7 @@ img {
   text-align: center;
 }
 
-.facility-map__actions,
-.reviews__actions {
+.facility-map__actions {
   text-align: center;
   margin-top: var(--mb-3);
 }
