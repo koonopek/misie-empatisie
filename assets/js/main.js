@@ -18,7 +18,33 @@ function main() {
   showMenu("nav-toggle", "nav-menu");
 
   /*==================== REMOVE MENU MOBILE ====================*/
-  const navLink = document.querySelectorAll(".nav__link");
+  const navLink = document.querySelectorAll("a.nav__link");
+  const dropdownToggles = document.querySelectorAll(".nav__dropdown-toggle");
+
+  function closeDropdowns(exceptItem = null) {
+    dropdownToggles.forEach((button) => {
+      const item = button.closest(".nav__item--dropdown");
+      if (!item || item === exceptItem) return;
+
+      item.classList.remove("show-dropdown");
+      button.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  dropdownToggles.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+
+      const item = button.closest(".nav__item--dropdown");
+      if (!item) return;
+
+      const isOpen = item.classList.toggle("show-dropdown");
+      button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      closeDropdowns(item);
+    });
+  });
+
+  document.addEventListener("click", () => closeDropdowns());
 
   function getHeaderOffset() {
     const header = document.getElementById("header");
@@ -38,11 +64,13 @@ function main() {
   function linkAction(event) {
     const navMenu = document.getElementById("nav-menu");
     const hash = this.getAttribute("href");
-    const target = hash && hash !== "#" ? document.querySelector(hash) : null;
 
     // When we click on each nav__link, we remove the show-menu class
     navMenu?.classList.remove("show-menu");
 
+    if (!hash || !hash.startsWith("#") || hash === "#") return;
+
+    const target = document.querySelector(hash);
     if (!target) return;
 
     event.preventDefault();
@@ -50,6 +78,13 @@ function main() {
     history.pushState(null, "", hash);
   }
   navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+  document.querySelectorAll(".nav__dropdown-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      document.getElementById("nav-menu")?.classList.remove("show-menu");
+      closeDropdowns();
+    });
+  });
 
   /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
   const sections = document.querySelectorAll("section[id]");
@@ -61,15 +96,14 @@ function main() {
       const sectionHeight = current.offsetHeight;
       const sectionTop = current.offsetTop - 200;
       const sectionId = current.getAttribute("id");
+      const activeLink = document.querySelector(
+        `.nav__menu a[href="#${sectionId}"]`,
+      );
 
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        document
-          .querySelector(".nav__menu a[href*=" + sectionId + "]")
-          ?.classList.add("active-link");
+        activeLink?.classList.add("active-link");
       } else {
-        document
-          .querySelector(".nav__menu a[href*=" + sectionId + "]")
-          ?.classList.remove("active-link");
+        activeLink?.classList.remove("active-link");
       }
     });
   }
@@ -104,6 +138,8 @@ function main() {
 
   sr.reveal(
     `.decoration__data,
+           .locations__card,
+           .facility__card,
            .offer__content,
            .gallery__content,
            .footer__content,
@@ -124,23 +160,24 @@ function main() {
     origin: "right",
   });
 
-  // gallery
-  import("https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js").then(
-    ({ default: PhotoSwipeLightbox }) => {
-      const lightbox = new PhotoSwipeLightbox({
-        gallery: "#gallery__container",
-        children: "div",
-        pswpModule: () => import("https://unpkg.com/photoswipe"),
-      });
+  if (document.querySelector("#gallery__container")) {
+    import("https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js").then(
+      ({ default: PhotoSwipeLightbox }) => {
+        const lightbox = new PhotoSwipeLightbox({
+          gallery: "#gallery__container",
+          children: "div",
+          pswpModule: () => import("https://unpkg.com/photoswipe"),
+        });
 
-      lightbox.addFilter("domItemData", (itemData) => {
-        itemData.src = itemData.element.dataset.src;
-        itemData.width = itemData.element.dataset.pswpWidth;
-        itemData.height = itemData.element.dataset.pswpHeight;
-        return itemData;
-      });
+        lightbox.addFilter("domItemData", (itemData) => {
+          itemData.src = itemData.element.dataset.src;
+          itemData.width = itemData.element.dataset.pswpWidth;
+          itemData.height = itemData.element.dataset.pswpHeight;
+          return itemData;
+        });
 
-      lightbox.init();
-    },
-  );
+        lightbox.init();
+      },
+    );
+  }
 }

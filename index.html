@@ -7,7 +7,7 @@
 
   <!-- POPRAWIONY META DESCRIPTION - 165 znaków -->
   <meta name="description"
-    content="Przedszkole i Żłobek Misie Empatisie w Warszawie na Pradze Południe. Bliskościowa opieka oparta na NVC, zdrowe żywienie, indywidualne podejście. Zapisy tel: 606 386 598" />
+    content="Przedszkole i Żłobek Misie Empatisie w Warszawie na Pradze Południe. Dwie placówki: Przeworska i Drwęcka, bliskościowa opieka NVC i zdrowe żywienie. Zapisy tel: 606 386 598" />
 
   <!-- DODANE META KEYWORDS -->
   <meta name="keywords"
@@ -16,7 +16,7 @@
   <!-- DODANE SOCIAL MEDIA META TAGS (Open Graph) -->
   <meta property="og:title" content="Przedszkole i Żłobek Misie Empatisie - Warszawa Praga Południe" />
   <meta property="og:description"
-    content="Bliskościowe przedszkole i żłobek w Warszawie. Opieka oparta na NVC, zdrowe żywienie, indywidualne podejście do każdego dziecka. Zapisy: 606 386 598" />
+    content="Bliskościowe przedszkole i żłobek w Warszawie. Placówki przy ul. Przeworskiej i Drwęckiej, opieka oparta na NVC, zdrowe żywienie i indywidualne podejście. Zapisy: 606 386 598" />
   <meta property="og:image" content="assets/img/misie_empatisie_logo.jpg" />
   <meta property="og:url" content="https://misie-empatisie.pl" />
   <meta property="og:type" content="website" />
@@ -26,7 +26,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Przedszkole i Żłobek Misie Empatisie - Warszawa" />
   <meta name="twitter:description"
-    content="Bliskościowe przedszkole i żłobek w Warszawie na Pradze Południe. NVC, zdrowe żywienie, indywidualne podejście." />
+    content="Bliskościowe przedszkole i żłobek w Warszawie na Pradze Południe. Dwie placówki, NVC, zdrowe żywienie, indywidualne podejście." />
   <meta name="twitter:image" content="assets/img/misie_empatisie_logo.jpg" />
 
   <!--========== BOX ICONS ==========-->
@@ -55,7 +55,7 @@
 
   <!-- POPRAWIONY TITLE Z KLUCZOWYMI SŁOWAMI -->
   <title>
-    Przedszkole i Żłobek Misie Empatisie - Warszawa Praga Południe | NVC i
+    Przedszkole i Żłobek Misie Empatisie - Warszawa Praga Południe | Dwie placówki, NVC i
     Bliskościowa Opieka
   </title>
 
@@ -113,6 +113,30 @@
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61568444164081",
         "https://www.instagram.com/misie_empatisie/"
+      ],
+      "department": [
+        {
+          "@type": "ChildCare",
+          "name": "Misie Empatisie - Przeworska",
+          "url": "https://misie-empatisie.pl/location-przeworska.html",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Przeworska 7/U7",
+            "addressLocality": "Warszawa",
+            "addressCountry": "PL"
+          }
+        },
+        {
+          "@type": "ChildCare",
+          "name": "Misie Empatisie - Drwęcka",
+          "url": "https://misie-empatisie.pl/location-drwecka.html",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Drwęcka 18/U4",
+            "addressLocality": "Warszawa",
+            "addressCountry": "PL"
+          }
+        }
       ]
     }
   </script>
@@ -129,11 +153,11 @@
   <!--========== HEADER ==========-->
   <header class="l-header" id="header">
     <nav class="nav bd-container">
-      <div class="nav__logo">
+      <a href="#home" class="nav__logo" aria-label="Misie Empatisie - strona główna">
         <!-- POPRAWIONY ALT DLA LOGO -->
         <img src="assets/img/misie_empatisie_logo.jpg" width="85" height="auto"
           alt="Logo Przedszkole i Żłobek Misie Empatisie Warszawa" />
-      </div>
+      </a>
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
           <li class="nav__item">
@@ -148,11 +172,14 @@
           <li class="nav__item">
             <a href="#terapia" class="nav__link">Terapia</a>
           </li>
-          <li class="nav__item">
-            <a href="#decoration" class="nav__link">Opiekunowie</a>
-          </li>
-          <li class="nav__item">
-            <a href="#gallery" class="nav__link">Galeria</a>
+          <li class="nav__item nav__item--dropdown">
+            <button class="nav__link nav__dropdown-toggle" type="button" aria-expanded="false">
+              Placówki <i class="bx bx-chevron-down"></i>
+            </button>
+            <ul class="nav__dropdown" aria-label="Wybierz placówkę">
+              <li><a href="location-przeworska.html" class="nav__dropdown-link">Przeworska</a></li>
+              <li><a href="location-drwecka.html" class="nav__dropdown-link">Drwęcka</a></li>
+            </ul>
           </li>
           <li class="nav__item">
             <a href="#contact" class="nav__link">Kontakt</a>
@@ -183,7 +210,7 @@
       <div class="home__container bd-container bd-grid">
         <div class="home__img">
           <!-- POPRAWIONY ALT I ROZMIARY -->
-          <img src="assets/img/zyrafa_home.png" width="400" height="300"
+          <img src="assets/img/giraffe-home.png" width="400" height="300"
             alt="Żyrafa maskotka przedszkola Misie Empatisie - symbol bliskości i empatii" loading="lazy" />
         </div>
 
@@ -209,7 +236,7 @@
       <div class="contact__container bd-grid">
         <div class="contact__data">
           <!-- POPRAWIONE ALT I ROZMIARY -->
-          <img src="assets/img/zyrafa_ikona.png" width="80" height="80"
+          <img src="assets/img/giraffe-icon.png" width="80" height="80"
             alt="Ikona żyrafy NVC - Porozumienie bez Przemocy w przedszkolu" loading="lazy" class="contact__img" />
           <h3 class="contact__title">NVC - Porozumienie bez Przemocy</h3>
           <p class="contact__description">
@@ -222,7 +249,7 @@
         </div>
 
         <div class="contact__data">
-          <img src="assets/img/blisckosc.png" width="80" height="80"
+          <img src="assets/img/closeness.png" width="80" height="80"
             alt="Ikona bliskości - symbol bliskich relacji w żłobku i przedszkolu" loading="lazy"
             class="contact__img" />
           <h3 class="contact__title">Bliskość i Empatia</h3>
@@ -236,7 +263,7 @@
         </div>
 
         <div class="contact__data">
-          <img src="assets/img/zdrowe_jedzenie.png" width="80" height="80"
+          <img src="assets/img/healthy-food.png" width="80" height="80"
             alt="Ikona zdrowego jedzenia - zdrowe żywienie dzieci w przedszkolu" loading="lazy" class="contact__img" />
           <h3 class="contact__title">Zdrowe Żywienie Dzieci</h3>
 
@@ -454,220 +481,35 @@
       </div>
     </section>
 
-    <!--========== DECORATION ==========-->
-    <section class="decoration section bd-container" id="decoration">
-      <h2 class="section-title">Nasz zespół</h2>
-      <div class="decoration__container">
-        <div class="decoration__data">
-          <div class="decoration__photo-column">
-            <img loading="lazy" src="assets/img/milenka.png" width="200" height="200"
-              alt="Milena Konopka - Dyrektor przedszkola i żłobka Misie Empatisie, wychowawca z certyfikatem NVC"
-              class="decoration__img" />
-          </div>
-          <div class="decoration__text-column">
-            <h3 class="decoration__title">Milena Konopka</h3>
-            <p class="decoration__subtitle">Dyrektor, wychowawca</p>
-            <p class="decoration__description">
-              W pracy z Dziećmi bardzo istotne jest dla mnie indywidualne
-              podejście. Dzięki niemu możemy dostrzec w dziecku to, czego nie
-              widać na pierwszy rzut oka. Traktuję dzieci jak swoich małych
-              przyjaciół, którym oddaję całe serce. Jednocześnie prowadzę ich,
-              wyznaczając drogę w procesie rozwoju i nauczania. Niezwykle
-              ważne jest dla mnie aby poczucie bezpieczeństwa i zaufanie
-              towarzyszyły naszym podopiecznym w każdej napotkanej sytuacji.
-              <br />
-              Jestem nauczycielem wychowania przedszkolnego, a także
-              pedagogiem specjalnym. Z czasem zdobyłam także wiedzę z
-              zarządzania w oświacie oraz ukończyłam studia podyplomowe z
-              Porozumienia bez Przemocy, według Marshalla Rosenberga.
-            </p>
-          </div>
-        </div>
+    <!--========== SEE MORE ==========-->
+    <section class="locations section bd-container" id="locations">
+      <h2 class="section-title">Zobacz więcej</h2>
+      <p class="locations__intro">
+        Chcesz poznać szczegóły? Wejdź na podstronę wybranej placówki i zobacz kadrę, galerię oraz mapę dojazdu.
+      </p>
 
-        <div class="decoration__data">
-          <div class="decoration__photo-column">
-            <img loading="lazy" src="assets/img/amelka.jpg" width="200" height="200"
-              alt="Amelia Szklarczyk - Wychowawca" class="decoration__img" />
-          </div>
-          <div class="decoration__text-column">
-            <h3 class="decoration__title">Amelia Szklarczyk</h3>
-            <p class="decoration__subtitle">Wychowawca</p>
-            <p class="decoration__description">
-              Wybrałam pracę z dziećmi, ponieważ od zawsze fascynowało mnie
-              ich spojrzenie na świat. Uwielbiam w swojej pracy atmosferę
-              pełną radości, energii i niekończących się pytań, które dzieci
-              zadają. Ważne dla mnie są relacje, które buduję z maluchami oraz
-              ich rodzicami, gdyż to właśnie one tworzą poczucie
-              bezpieczeństwa i zaufania. W mojej pracy kieruję się empatią,
-              cierpliwością i otwartością na nowe pomysły, co pozwala mi
-              lepiej zrozumieć potrzeby dzieci. Uwielbiam czytać książki i
-              tworzyć prace plastyczne z maluchami. Każdy dzień przynosi nowe
-              wyzwania, ale także wiele radości i satysfakcji z bycia częścią
-              ich rozwoju. Poprzez praktykę, pracę w żłobku oraz kurs zdobyłam
-              doświadczenie oraz kwalifikacje do pracy z dziećmi. Obecnie
-              studiuję pedagogikę, co pozwala mi stale poszerzać swoją wiedzę
-              i umiejętności, aby jeszcze lepiej wspierać rozwój moich
-              podopiecznych.
-            </p>
-          </div>
-        </div>
-
-        <div class="decoration__data">
-          <div class="decoration__photo-column">
-            <img loading="lazy" src="assets/img/ola.jpg" width="200" height="200" alt="Aleksandra Sobowicz - Wychowawca"
-              class="decoration__img" />
-          </div>
-          <div class="decoration__text-column">
-            <h3 class="decoration__title">Aleksandra Sobowicz</h3>
-            <p class="decoration__subtitle">Wychowawca</p>
-            <p class="decoration__description">
-              Jestem pedagogiem przedszkolnym i wczesnoszkolnym z przygotowaniem w zakresie terapii pedagogicznej. Swoją
-              pracę traktuję jak pasję – daje mi ogrom radości i satysfakcji, bo mogę wspierać dzieci w rozwoju i
-              towarzyszyć im w odkrywaniu świata. Każdy dzień z nimi jest inny – pełen śmiechu, nowych doświadczeń i
-              małych (a czasem całkiem dużych!) sukcesów.
-              <br />
-              Najważniejsze w mojej pracy są emocje, poczucie bezpieczeństwa i bliskość. Wierzę, że tylko w atmosferze
-              akceptacji i zrozumienia dziecko może naprawdę rozwinąć skrzydła, budować pewność siebie i odkrywać swoje
-              możliwości. Staram się uważnie patrzeć na potrzeby każdego dziecka i podążać za nimi – a nie odwrotnie.
-              Uwielbiam tworzyć zajęcia, które są ciekawe, rozwijają kreatywność, pobudzają ciekawość i uczą współpracy.
-              Ogromną satysfakcję daje mi też wspieranie dzieci w radzeniu sobie z emocjami i pokazanie im, że każde
-              uczucie ma swoje miejsce i znaczenie.
-              W niedalekiej przyszłości chciałabym rozwijać się dalej i pracować jako psycholog dziecięcy – żeby jeszcze
-              pełniej wspierać dzieci i ich rodziny w codziennych wyzwaniach.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="decoration__data">
-        <div class="decoration__photo-column">
-          <img loading="lazy" src="assets/img/empt_logo.png" width="200" height="200"
-            alt="Julia Gierczak - Wychowawca żłobka z doświadczeniem w pracy z małymi dziećmi"
-            class="decoration__img" />
-        </div>
-        <div class="decoration__text-column">
-          <h3 class="decoration__title">Julia Gierczak</h3>
-          <p class="decoration__subtitle">Wychowawca</p>
-          <p class="decoration__description">
-            Jestem studentką pedagogiki i od kilku lat mam przyjemność pracować z dziećmi.
-            To właśnie one dają mi najwięcej radości i motywacji do działania.
-            Uwielbiam patrzeć, jak rozwijają się, poznają świat i z ciekawością odkrywają nowe rzeczy każdego dnia.
-            W pracy najważniejsze jest dla mnie, aby każde dziecko czuło się bezpieczne, otoczone troską i akceptacją –
-            bo tylko wtedy może w pełni rozkwitać i rozwijać swoje talenty.
+      <div class="locations__container bd-grid">
+        <article class="locations__card">
+          <img src="assets/img/misie_empatisie_logo.jpg" width="120" height="120"
+            alt="Logo placówki Misie Empatisie Przeworska" loading="lazy" class="locations__img" />
+          <h3 class="locations__title">Przeworska</h3>
+          <p class="locations__address">ul. Przeworska 7/U7, Warszawa</p>
+          <p class="locations__description">
+            Kadra, galeria i dojazd do placówki przy ul. Przeworskiej.
           </p>
-        </div>
-      </div>
+          <a href="location-przeworska.html" class="button locations__button">Zobacz więcej</a>
+        </article>
 
-      <div class="decoration__data">
-        <div class="decoration__photo-column">
-          <img loading="lazy" src="assets/img/nastka.png" width="200" height="200"
-            alt="Anastasiia Havrylenko - Wychowawca przedszkola, specjalistka od zajęć muzycznych dla dzieci"
-            class="decoration__img" />
-        </div>
-        <div class="decoration__text-column">
-          <h3 class="decoration__title">Anastasiia Havrylenko</h3>
-          <p class="decoration__subtitle">Wychowawca</p>
-          <p class="decoration__description">
-            Pracuje z dziećmi od kilku lat i jestem zakochana w swojej
-            pracy. Uważam, że ważnym aspektem prawidłowego rozwoju dziecka
-            jest poczucie bezpieczeństwa, które zapewniam okazując maluchom
-            troskę, wyrozumiałość i empatię. W swojej pracy najbardziej
-            lubię wyzwania, bo jest to praca, gdzie na co dzień zmierzamy
-            się z nowymi sytuacjami - buntami, kryzysami, ząbkowaniem.
-            Bardzo lubię prowadzić zajęcia muzyczne, podczas których dzieci
-            rozwijają poczucie rytmu, co wspiera także ich koordynację
-            ruchową.
+        <article class="locations__card">
+          <img src="assets/img/misie_empatisie_logo.jpg" width="120" height="120"
+            alt="Logo placówki Misie Empatisie Drwęcka" loading="lazy" class="locations__img" />
+          <h3 class="locations__title">Drwęcka</h3>
+          <p class="locations__address">ul. Drwęcka 18/U4, Warszawa</p>
+          <p class="locations__description">
+            Kadra, galeria i dojazd do placówki przy ul. Drwęckiej.
           </p>
-        </div>
-      </div>
-
-      <div class="decoration__data">
-        <div class="decoration__photo-column">
-          <img loading="lazy" src="assets/img/yulia.jpg" width="200" height="200"
-            alt="Yuliia Bondar - Wychowawca żłobka z doświadczeniem w pracy z małymi dziećmi" class="decoration__img" />
-        </div>
-        <div class="decoration__text-column">
-          <h3 class="decoration__title">Yuliia Bondar</h3>
-          <p class="decoration__subtitle">Wychowawca</p>
-          <p class="decoration__description">
-            Lubię swoją pracę, ponieważ praca z dziećmi jest pełna ciekawych
-            wyzwań. Fascynuje mnie obserwowanie ich emocji, radości oraz
-            reakcji na różne sytuacje i ciekawostki. Bardzo zależy mi na
-            tym, aby zapewnić dzieciom dobrą opiekę, uczyć je nowych rzeczy
-            i budować poczucie bezpieczeństwa. Dbam o nie i staram się
-            zrobić wszystko, aby ich dzieciństwo było szczęśliwe. Każde
-            dziecko jest wyjątkowe, jedyne w swoim rodzaju. Każde z nich ma
-            szczególne miejsce w moim sercu. Posiadam zarówno doświadczenie,
-            jak i kwalifikacje do pracy z dziećmi, co pozwala mi w pełni
-            zaangażować się w tę rolę.
-          </p>
-        </div>
-      </div>
-
-      <div class="decoration__data">
-        <div class="decoration__photo-column">
-          <img loading="lazy" src="assets/img/monika.jpg" width="200" height="200"
-            alt="Monika Maksimow - Pomoc wychowawcy" class="decoration__img" />
-        </div>
-        <div class="decoration__text-column">
-          <h3 class="decoration__title">Monika Maksimow</h3>
-          <p class="decoration__subtitle">Pomoc wychowawcy</p>
-          <p class="decoration__description">
-            W pracy z dziećmi szczególnie cenię sobie bliskość, zaufanie i indywidualne podejście, ponieważ wierzę, że
-            zrozumienie i akceptacja są kluczem do ich prawidłowego rozwoju i poczucia bezpieczeństwa. Posiadam
-            doświadczenie w pracy z dziećmi w spektrum autyzmu, co pozwoliło mi rozwinąć umiejętność wrażliwego
-            reagowania na różnorodne potrzeby oraz dostrzegania wyjątkowości każdego dziecka. Jako pomoc wychowawcy
-            staram się tworzyć atmosferę pełną ciepła, akceptacji i zrozumienia, w której każde dziecko może czuć się
-            ważne, bezpieczne i otwarte na odkrywanie świata. W życiu prywatnym jestem mamą dwójki dzieci – syna i córki
-            – dzięki którym każdego dnia uczę się jeszcze lepiej rozumieć potrzeby i emocje najmłodszych. </p>
-        </div>
-      </div>
-
-
-
-
-    </section>
-
-    <!--========== GALERIA ==========-->
-    <section class="gallery section bd-container" id="gallery">
-      <h2 class="section-title">Galeria</h2>
-
-      <div class="offer__container bd-grid" id="gallery__container">
-        <div class="offer__content" id="offer__content__image__1" data-src="assets/img/gallery_1.jpg"
-          data-pswp-width="768" data-pswp-height="1024">
-          <a href="#" class="button offer__button" aria-label="Pokaż zdjęcie przedszkola w pełnym rozmiarze"><i
-              class="bx bx-fullscreen"></i></a>
-        </div>
-
-        <div class="offer__content" id="offer__content__image__2" data-src="assets/img/gallery_2.jpg"
-          data-pswp-width="1536" data-pswp-height="2048">
-          <a href="#" class="button offer__button" aria-label="Pokaż zdjęcie żłobka w pełnym rozmiarze"><i
-              class="bx bx-fullscreen"></i></a>
-        </div>
-
-        <div class="offer__content" id="offer__content__image__3" data-src="assets/img/gallery_3.jpg"
-          data-pswp-width="2048" data-pswp-height="1536">
-          <a href="#" class="button offer__button" aria-label="Pokaż zdjęcie wnętrza w pełnym rozmiarze"><i
-              class="bx bx-fullscreen"></i></a>
-        </div>
-
-        <div class="offer__content" id="offer__content__image__4" data-src="assets/img/gallery_4.jpg"
-          data-pswp-width="1642" data-pswp-height="2046">
-          <a href="#" class="button offer__button" aria-label="Pokaż zdjęcie sal w pełnym rozmiarze"><i
-              class="bx bx-fullscreen"></i></a>
-        </div>
-
-        <div class="offer__content" id="offer__content__image__5" data-src="assets/img/gallery_5.jpg"
-          data-pswp-width="1024" data-pswp-height="768">
-          <a href="#" class="button offer__button" aria-label="Pokaż zdjęcie placu zabaw w pełnym rozmiarze"><i
-              class="bx bx-fullscreen"></i></a>
-        </div>
-
-        <div class="offer__content" id="offer__content__image__6" data-src="assets/img/gallery_6.jpg"
-          data-pswp-width="4032" data-pswp-height="3024">
-          <a href="#" class="button offer__button" aria-label="Pokaż zdjęcie dzieci w pełnym rozmiarze"><i
-              class="bx bx-fullscreen"></i></a>
-        </div>
+          <a href="location-drwecka.html" class="button locations__button">Zobacz więcej</a>
+        </article>
       </div>
     </section>
 
@@ -687,7 +529,7 @@
         </div>
 
         <div class="contact__data">
-          <img src="assets/img/adres.png" width="60" height="60"
+          <img src="assets/img/address.png" width="60" height="60"
             alt="Adres przedszkola żłobka Misie Empatisie Warszawa Praga Południe" loading="lazy"
             class="contact__img" />
           <h3 class="contact__title">Adres</h3>
@@ -695,8 +537,8 @@
             <a class="button button-link" target="_blank" href="https://maps.app.goo.gl/DYRCUcpJGinNbJj2A">Przeworska
               7/U7 04-382 Warszawa</a>
             <br /> oraz <br />
-            <a class="button button-link" target="_blank" href="https://maps.app.goo.gl/Ks4oPvHGaEiGrowP6">Drwęcka 18/U4
-              7/U7 04-382 Warszawa</a>
+            <a class="button button-link" target="_blank" href="https://maps.app.goo.gl/Ks4oPvHGaEiGrowP6">Drwęcka
+              18/U4 Warszawa</a>
           </p>
         </div>
 
@@ -709,15 +551,6 @@
           <br />
           <a class="button button-link" target="_blank" href="https://www.instagram.com/misie_empatisie/">Instagram</a>
         </div>
-      </div>
-
-      <div class="mapa__container bd-grid bd-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.3666672061654!2d21.078719277518697!3d52.25488637199278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecde237c0951f%3A0x356fc20967a6092b!2sNiepubliczny%20%C5%BB%C5%82obek%20i%20Przedszkole%20Funny%20Fox!5e0!3m2!1spl!2spl!4v1724793461268!5m2!1spl!2spl"
-          width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Mapa lokalizacji Przedszkole i Żłobek Misie Empatisie - Przeworska 7/U7, Warszawa">
-        </iframe>
       </div>
     </section>
   </main>
