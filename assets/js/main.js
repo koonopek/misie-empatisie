@@ -130,6 +130,37 @@ function main() {
   }
   window.addEventListener("scroll", scrollTop);
 
+  /*==================== CONTACT EVENT TRACKING ====================*/
+  // GA4 events for every contact action, so paid campaigns can import them
+  // as conversions - the site has no form, so these clicks are the only signal.
+  const contactEvents = [
+    { name: "phone_click", match: (href) => href.startsWith("tel:") },
+    { name: "email_click", match: (href) => href.startsWith("mailto:") },
+    {
+      name: "directions_click",
+      match: (href) => href.includes("maps.app.goo.gl") || href.includes("google.com/maps"),
+    },
+    {
+      name: "social_click",
+      match: (href) => href.includes("facebook.com") || href.includes("instagram.com"),
+    },
+  ];
+
+  function trackContactClick(event) {
+    const link = event.target.closest("a[href]");
+    if (!link || typeof gtag !== "function") return;
+
+    const href = link.getAttribute("href");
+    const tracked = contactEvents.find((contact) => contact.match(href));
+    if (!tracked) return;
+
+    gtag("event", tracked.name, {
+      link_url: href,
+      link_text: link.textContent.trim(),
+    });
+  }
+  document.addEventListener("click", trackContactClick);
+
   /*==================== SCROLL REVEAL ANIMATION ====================*/
   const sr = ScrollReveal({
     duration: 1800,
