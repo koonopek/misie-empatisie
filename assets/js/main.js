@@ -1,5 +1,4 @@
 window.addEventListener("DOMContentLoaded", main);
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 function main() {
   /*==================== SHOW MENU ====================*/
@@ -161,37 +160,18 @@ function main() {
   }
   document.addEventListener("click", trackContactClick);
 
-  /*==================== SCROLL REVEAL ANIMATION ====================*/
-  const sr = ScrollReveal({
-    duration: 1800,
-    delay: isMobile ? 400 : 100,
-  });
+  /*==================== PHOTOSWIPE GALLERY ====================*/
+  const gallery = document.querySelector("#gallery__container");
 
-  sr.reveal(
-    `.decoration__data,
-           .locations__card,
-           .facility__card,
-           .offer__content:not(.offer__content--hidden),
-           .gallery__content,
-           .footer__content,
-           .contact__data,
-           .terapia__content,
-           .work__data,
-           .mapa__container`,
-    {
-      origin: "top",
-    },
-  );
+  function loadPhotoSwipe() {
+    if (!gallery || gallery.dataset.lightboxLoading) return;
+    gallery.dataset.lightboxLoading = "true";
 
-  sr.reveal(`.about_us__img,  .offering__prices`, {
-    origin: "left",
-  });
+    const photoswipeCss = document.createElement("link");
+    photoswipeCss.rel = "stylesheet";
+    photoswipeCss.href = "https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css";
+    document.head.appendChild(photoswipeCss);
 
-  sr.reveal(`.about_us__data, .send__img, .offering__description`, {
-    origin: "right",
-  });
-
-  if (document.querySelector("#gallery__container")) {
     import("https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js").then(
       ({ default: PhotoSwipeLightbox }) => {
         const lightbox = new PhotoSwipeLightbox({
@@ -210,5 +190,22 @@ function main() {
         lightbox.init();
       },
     );
+  }
+
+  if (gallery) {
+    if ("IntersectionObserver" in window) {
+      const galleryObserver = new IntersectionObserver(
+        (entries, observer) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+
+          observer.disconnect();
+          loadPhotoSwipe();
+        },
+        { rootMargin: "200px" },
+      );
+      galleryObserver.observe(gallery);
+    } else {
+      loadPhotoSwipe();
+    }
   }
 }
