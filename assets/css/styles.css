@@ -448,6 +448,14 @@ img {
   margin-bottom: var(--mb-2);
 }
 
+.locations__img--photo {
+  width: 100%;
+  max-width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
 .locations__title,
 .facility__card-title {
   margin-bottom: var(--mb-1);
