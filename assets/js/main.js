@@ -171,7 +171,7 @@ function main() {
     `.decoration__data,
            .locations__card,
            .facility__card,
-           .offer__content,
+           .offer__content:not(.offer__content--hidden),
            .gallery__content,
            .footer__content,
            .contact__data,

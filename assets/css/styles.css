@@ -768,6 +768,10 @@ img {
   background-position: center;
 }
 
+.offer__content--hidden {
+  display: none;
+}
+
 .offer__content:hover {
   box-shadow: 0 3px 12px rgba(65, 11, 16, 0.15);
 }
