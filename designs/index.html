@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propozycje wyglądu — grupy i plan dnia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Protest+Riot&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green: #3a781b;
+      --title: #72b351;
+      --brown: rgb(180, 113, 41);
+      --text: #5b5757;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Poppins, sans-serif;
+      color: var(--text);
+      background: #f7f4ee;
+      line-height: 1.55;
+    }
+    header {
+      background: #fff;
+      padding: 2rem 1.5rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    h1 {
+      font-family: "Protest Riot", sans-serif;
+      color: var(--title);
+      font-size: 2.2rem;
+      font-weight: 400;
+      margin: 0 0 0.5rem;
+    }
+    header p { max-width: 680px; margin: 0 auto; }
+    main { max-width: 980px; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
+    h2 { color: var(--green); margin: 2rem 0 0.75rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+    a.card {
+      display: block;
+      background: #fff;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(65, 11, 16, 0.12);
+      color: inherit;
+      text-decoration: none;
+    }
+    a.card:hover { box-shadow: 0 6px 16px rgba(65, 11, 16, 0.16); }
+    a.card img {
+      display: block;
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      object-position: top;
+      background: #fff;
+      border-bottom: 1px solid #f0ece6;
+    }
+    a.card .pad { padding: 1rem 1.15rem 1.15rem; }
+    a.card strong { display: block; color: var(--green); font-size: 1.05rem; margin-bottom: 0.3rem; }
+    a.card span { font-size: 0.88rem; }
+    .note {
+      background: #fff;
+      border-left: 4px solid var(--brown);
+      padding: 1rem 1.2rem;
+      border-radius: 0.6rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wybierz wygląd</h1>
+    <p>
+      Cztery propozycje sekcji <strong>Nasze grupy</strong> (na stronie placówki)
+      i cztery propozycje <strong>Planu dnia</strong> (na stronie głównej).
+      Treść jest przykładowa — nazwy grup i godziny można później zmienić.
+    </p>
+  </header>
+  <main>
+    <h2>Nasze grupy — strona placówki</h2>
+    <div class="grid">
+      <a class="card" href="grupy-a-karty.html">
+        <img src="screenshots/grupy_a_karty.png" alt="Wariant A: trzy karty grup" />
+        <div class="pad">
+          <strong>A. Karty grup</strong>
+          <span>Trzy karty obok siebie, jak lokalizacje na stronie głównej. Najbliżej obecnego stylu.</span>
+        </div>
+      </a>
+      <a class="card" href="grupy-b-os-wieku.html">
+        <img src="screenshots/grupy_b_os_wieku.png" alt="Wariant B: oś wieku" />
+        <div class="pad">
+          <strong>B. Oś wieku</strong>
+          <span>Ścieżka od żłobka do grupy starszej. Pokazuje, jak dziecko „rośnie” w placówce.</span>
+        </div>
+      </a>
+      <a class="card" href="grupy-c-podzial.html">
+        <img src="screenshots/grupy_c_podzial.png" alt="Wariant C: żłobek i przedszkole" />
+        <div class="pad">
+          <strong>C. Żłobek i przedszkole</strong>
+          <span>Dwa panele: najmłodsi osobno, przedszkole osobno. Czytelny podział oferty.</span>
+        </div>
+      </a>
+      <a class="card" href="grupy-d-lista.html">
+        <img src="screenshots/grupy_d_lista.png" alt="Wariant D: lista z akcentem" />
+        <div class="pad">
+          <strong>D. Lista z akcentem</strong>
+          <span>Więcej tekstu, wiek z boku. Podobne do sekcji Terapia.</span>
+        </div>
+      </a>
+    </div>
+
+    <h2>Plan dnia — strona główna</h2>
+    <div class="grid">
+      <a class="card" href="plan-a-os-czasu.html">
+        <img src="screenshots/plan_a_os_czasu.png" alt="Wariant A: oś czasu" />
+        <div class="pad">
+          <strong>A. Oś czasu</strong>
+          <span>Klasyczny plan z godzinami i opisem. Najbardziej szczegółowy.</span>
+        </div>
+      </a>
+      <a class="card" href="plan-b-dwie-pory.html">
+        <img src="screenshots/plan_b_dwie_pory.png" alt="Wariant B: poranek i popołudnie" />
+        <div class="pad">
+          <strong>B. Poranek i popołudnie</strong>
+          <span>Dwie kolumny. Szybki przegląd całego dnia.</span>
+        </div>
+      </a>
+      <a class="card" href="plan-c-siatka.html">
+        <img src="screenshots/plan_c_siatka.png" alt="Wariant C: siatka godzin" />
+        <div class="pad">
+          <strong>C. Siatka godzin</strong>
+          <span>Karty z ikonami, jak sekcja „Jak działamy?”. Lekki, przyjazny układ.</span>
+        </div>
+      </a>
+      <a class="card" href="plan-d-pasek.html">
+        <img src="screenshots/plan_d_pasek.png" alt="Wariant D: pasek dnia" />
+        <div class="pad">
+          <strong>D. Pasek dnia</strong>
+          <span>Wizualny pasek od 7:30 do 17:30 plus lista. Dobry „skan” dnia.</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="note">
+      To tylko makiety do wyboru. Na żywej stronie nic jeszcze nie zmieniłem —
+      napisz, który wariant grup i który plan dnia wstawić (np. grupy C + plan B).
+      Nazwy grup (Misie, Żyrafki, Słoniki) i godziny są przykładowe.
+    </p>
+  </main>
+</body>
+</html>
