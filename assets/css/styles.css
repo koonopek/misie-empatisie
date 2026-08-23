@@ -895,18 +895,6 @@ img {
   color: #fff;
 }
 
-.offering__circle__month__text--compact {
-  font-size: 0.72rem;
-  line-height: 1.25;
-  width: 8.2rem;
-}
-
-.offering__fees-note {
-  max-width: none;
-  margin: 0 0 var(--mb-3);
-  text-align: left;
-}
-
 /*========== SEND GIFT ==========*/
 .send__container {
   justify-items: center;
