@@ -1166,17 +1166,16 @@ ul.offering__list li::before {
   background-color: var(--container-color);
   box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
   border-radius: 0.9rem;
-  padding: 0.85rem 1rem;
+  padding: 0.7rem 0.95rem;
 }
 
-.plan__title {
-  font-size: var(--h3-font-size);
-  color: var(--first-color-alt);
-}
-
+.plan__title,
 .plan__description {
+  font-size: var(--small-font-size);
+  font-weight: 400;
   color: var(--text-color);
   text-align: left;
+  line-height: 1.45;
 }
 
 @media screen and (min-width: 576px) {
