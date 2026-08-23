@@ -137,7 +137,10 @@ function main() {
     { name: "email_click", match: (href) => href.startsWith("mailto:") },
     {
       name: "directions_click",
-      match: (href) => href.includes("maps.app.goo.gl") || href.includes("google.com/maps"),
+      match: (href) =>
+        href.includes("maps.app.goo.gl") ||
+        href.includes("google.com/maps") ||
+        href.includes("share.google"),
     },
     {
       name: "social_click",
