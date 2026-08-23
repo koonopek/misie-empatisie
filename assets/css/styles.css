@@ -473,23 +473,6 @@ img {
   margin-top: auto;
 }
 
-.facility-cta {
-  max-width: 760px;
-  margin: var(--mb-4) auto 0;
-  text-align: center;
-}
-
-.facility-cta p {
-  margin-bottom: var(--mb-2);
-}
-
-.facility-cta__links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-}
-
 /*========== FACILITY PAGE ==========*/
 .facility-hero {
   padding-top: calc(var(--header-height) + 3rem);
