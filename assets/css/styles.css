@@ -1203,18 +1203,8 @@ ul.offering__list li::before {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: var(--title-color);
-  border: 3px solid #fff;
-  box-shadow: 0 0 0 2px var(--title-color);
-}
-
-.plan__item--meal .plan__dot {
-  background: var(--nav-color);
-  box-shadow: 0 0 0 2px var(--nav-color);
-}
-
-.plan__item--out .plan__dot {
   background: var(--first-color-alt);
+  border: 3px solid #fff;
   box-shadow: 0 0 0 2px var(--first-color-alt);
 }
 
