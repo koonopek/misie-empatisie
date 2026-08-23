@@ -58,6 +58,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 3.5rem);
 }
 
 body {
@@ -73,6 +74,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 ul,
 p {
   margin: 0;
@@ -597,6 +599,42 @@ img {
 }
 
 /*========== TERAPIA ==========*/
+.terapia,
+.terapia__card {
+  scroll-margin-top: calc(var(--header-height) + 3.5rem);
+}
+
+.terapia__intro {
+  max-width: 760px;
+  margin: 0 auto var(--mb-3);
+  text-align: center;
+}
+
+.terapia__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: var(--mb-4);
+}
+
+.terapia__nav-link {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border: 2px solid var(--first-color);
+  border-radius: 2rem;
+  color: var(--first-color-alt);
+  font-weight: var(--font-semi-bold);
+  font-size: var(--small-font-size);
+  transition: 0.3s;
+}
+
+.terapia__nav-link:hover,
+.terapia__nav-link:focus-visible {
+  background-color: var(--first-color);
+  color: #fff;
+}
+
 .terapia__container {
   display: flex;
   flex-direction: column;
@@ -618,18 +656,6 @@ img {
   box-shadow: 0 6px 16px rgba(65, 11, 16, 0.2);
 }
 
-.terapia__card--left {
-  margin-right: auto;
-  max-width: 85%;
-}
-
-.terapia__card--right {
-  margin-left: auto;
-  max-width: 85%;
-  border-left: none;
-  border-right: 4px solid var(--first-color);
-}
-
 .terapia__content {
   width: 100%;
 }
@@ -641,18 +667,51 @@ img {
   font-weight: var(--font-semi-bold);
 }
 
+.terapia__subtitle {
+  font-size: var(--normal-font-size);
+  color: var(--first-color-alt);
+  margin: var(--mb-2) 0 var(--mb-1);
+  font-weight: var(--font-semi-bold);
+}
+
 .terapia__description {
   color: var(--text-color);
   line-height: 1.6;
   text-align: justify;
 }
 
-@media screen and (max-width: 768px) {
+.terapia__list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 0 var(--mb-2);
+}
 
-  .terapia__card--left,
-  .terapia__card--right {
-    max-width: 100%;
-    margin: 0;
+.terapia__list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.4rem;
+  text-align: start;
+}
+
+.terapia__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 10px;
+  height: 10px;
+  background-color: #72b250;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    scroll-padding-top: calc(var(--header-height) + 4.5rem);
+  }
+
+  .terapia,
+  .terapia__card {
+    scroll-margin-top: calc(var(--header-height) + 4.5rem);
   }
 }
 

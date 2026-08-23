@@ -17,7 +17,9 @@ function main() {
   showMenu("nav-toggle", "nav-menu");
 
   /*==================== REMOVE MENU MOBILE ====================*/
-  const navLink = document.querySelectorAll("a.nav__link");
+  const navLink = document.querySelectorAll(
+    "a.nav__link, a.terapia__nav-link, .terapia a[href^='#']",
+  );
   const dropdownToggles = document.querySelectorAll(".nav__dropdown-toggle");
 
   function closeDropdowns(exceptItem = null) {
@@ -47,7 +49,7 @@ function main() {
 
   function getHeaderOffset() {
     const header = document.getElementById("header");
-    return (header?.offsetHeight || 0) + 24;
+    return (header?.offsetHeight || 0) + 56;
   }
 
   function scrollToSection(target) {
