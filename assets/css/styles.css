@@ -1178,6 +1178,22 @@ ul.offering__list li::before {
   line-height: 1.45;
 }
 
+.plan__description--bits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.plan__bit {
+  display: inline-block;
+  background: #f7f4ee;
+  color: var(--text-color);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  font-size: var(--small-font-size);
+  line-height: 1.4;
+}
+
 @media screen and (min-width: 576px) {
   .plan__item {
     grid-template-columns: 9.5rem 1fr;
