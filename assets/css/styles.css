@@ -1172,7 +1172,6 @@ ul.offering__list li::before {
 .plan__title {
   font-size: var(--h3-font-size);
   color: var(--first-color-alt);
-  margin-bottom: 0.15rem;
 }
 
 .plan__description {
@@ -1182,7 +1181,7 @@ ul.offering__list li::before {
 
 @media screen and (min-width: 576px) {
   .plan__item {
-    grid-template-columns: 6.75rem 1fr;
+    grid-template-columns: 9.5rem 1fr;
     gap: 1rem;
     align-items: start;
   }
