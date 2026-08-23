@@ -2,6 +2,7 @@
 <html lang="pl">
 
 <head>
+  <meta name="robots" content="noindex, nofollow">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -14,27 +15,20 @@
     content="przedszkole Warszawa, żłobek Warszawa, przedszkole Praga Południe, żłobek Praga Południe, Misie Empatisie, NVC, Porozumienie bez Przemocy, bliskościowe przedszkole, niepubliczne przedszkole" />
 
   <!-- DODANE SOCIAL MEDIA META TAGS (Open Graph) -->
-  <link rel="canonical" href="https://misie-empatisie.pl/" />
   <meta property="og:title" content="Przedszkole i Żłobek Misie Empatisie - Warszawa Praga Południe" />
   <meta property="og:description"
     content="Bliskościowe przedszkole i żłobek w Warszawie. Placówki przy ul. Przeworskiej i Drwęckiej, opieka oparta na NVC, zdrowe żywienie i indywidualne podejście. Zapisy: 606 386 598" />
-  <meta property="og:image" content="https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="800" />
-  <meta property="og:image:height" content="787" />
-  <meta property="og:image:alt" content="Logo przedszkola i żłobka Misie Empatisie na Pradze Południe" />
-  <meta property="og:url" content="https://misie-empatisie.pl/" />
+  <meta property="og:image" content="assets/img/misie_empatisie_logo.jpg" />
+  <meta property="og:url" content="https://misie-empatisie.pl" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pl_PL" />
-  <meta property="og:site_name" content="Misie Empatisie" />
 
   <!-- TWITTER CARDS -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Przedszkole i Żłobek Misie Empatisie - Warszawa" />
   <meta name="twitter:description"
     content="Bliskościowe przedszkole i żłobek w Warszawie na Pradze Południe. Dwie placówki, NVC, zdrowe żywienie, indywidualne podejście." />
-  <meta name="twitter:image" content="https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg" />
-  <meta name="twitter:image:alt" content="Logo przedszkola i żłobka Misie Empatisie na Pradze Południe" />
+  <meta name="twitter:image" content="assets/img/misie_empatisie_logo.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -98,20 +92,8 @@
       "url": "https://misie-empatisie.pl",
       "telephone": "+48606386598",
       "email": "misie.empatisie@gmail.com",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg",
-        "contentUrl": "https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg",
-        "width": 800,
-        "height": 787
-      },
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg",
-        "contentUrl": "https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg",
-        "width": 800,
-        "height": 787
-      },
+      "image": "https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg",
+      "logo": "https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Przeworska 7/U7",
@@ -123,7 +105,7 @@
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 52.254886,
-        "longitude": 21.0812942
+        "longitude": 21.078719
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -156,27 +138,23 @@
       "department": [
         {
           "@type": "ChildCare",
-          "@id": "https://misie-empatisie.pl/location-przeworska.html#preschool",
           "name": "Misie Empatisie - Przeworska",
           "url": "https://misie-empatisie.pl/location-przeworska.html",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Przeworska 7/U7",
             "addressLocality": "Warszawa",
-            "postalCode": "04-382",
             "addressCountry": "PL"
           }
         },
         {
           "@type": "ChildCare",
-          "@id": "https://misie-empatisie.pl/location-drwecka.html#preschool",
           "name": "Misie Empatisie - Drwęcka",
           "url": "https://misie-empatisie.pl/location-drwecka.html",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Drwęcka 18/U4",
             "addressLocality": "Warszawa",
-            "postalCode": "04-393",
             "addressCountry": "PL"
           }
         }
@@ -185,8 +163,6 @@
   </script>
 
   <link rel="icon" type="image/webp" href="assets/img/misie_empatisie_logo.webp" />
-  <link rel="icon" type="image/jpeg" href="assets/img/misie_empatisie_logo.jpg" />
-  <link rel="apple-touch-icon" href="assets/img/misie_empatisie_logo.jpg" />
 </head>
 
 <body>
@@ -213,9 +189,6 @@
           </li>
           <li class="nav__item">
             <a href="#offering" class="nav__link">Oferta</a>
-          </li>
-          <li class="nav__item">
-            <a href="#plan" class="nav__link">Plan dnia</a>
           </li>
           <li class="nav__item">
             <a href="#terapia" class="nav__link">Terapia</a>
@@ -464,83 +437,7 @@
       </div>
     </section>
 
-    <!--========== PLAN DNIA ==========-->
-    <section class="plan section bd-container" id="plan">
-      <h2 class="section-title">Plan dnia</h2>
-      <p class="plan__intro">
-        Nasz dzień ma spokojny rytm: bliskość rano, zabawa i nauka, posiłki, odpoczynek
-        i czas na świeżym powietrzu — niezależnie od pogody.
-      </p>
-      <div class="plan__list">
-        <article class="plan__item">
-          <span class="plan__dot" aria-hidden="true"></span>
-          <time class="plan__time" datetime="07:30">7:30-9:00</time>
-          <div class="plan__card">
-            <p class="plan__description plan__description--bits">
-              <span class="plan__bit">schodzenie się dzieci do placówki</span>
-            </p>
-          </div>
-        </article>
-        <article class="plan__item plan__item--meal">
-          <span class="plan__dot" aria-hidden="true"></span>
-          <time class="plan__time" datetime="09:00">9:00-9:30</time>
-          <div class="plan__card">
-            <p class="plan__description plan__description--bits">
-              <span class="plan__bit">śniadanko</span>
-            </p>
-          </div>
-        </article>
-        <article class="plan__item plan__item--out">
-          <span class="plan__dot" aria-hidden="true"></span>
-          <time class="plan__time" datetime="09:30">9:30-11:30</time>
-          <div class="plan__card">
-            <p class="plan__description plan__description--bits">
-              <span class="plan__bit">zajęcia oraz codzienne wyjście na dwór</span>
-            </p>
-          </div>
-        </article>
-        <article class="plan__item plan__item--meal">
-          <span class="plan__dot" aria-hidden="true"></span>
-          <time class="plan__time" datetime="11:30">11:30-12:00</time>
-          <div class="plan__card">
-            <p class="plan__description plan__description--bits">
-              <span class="plan__bit">obiadek (II danie)</span>
-            </p>
-          </div>
-        </article>
-        <article class="plan__item">
-          <span class="plan__dot" aria-hidden="true"></span>
-          <time class="plan__time" datetime="12:00">12:00 - 14:00</time>
-          <div class="plan__card">
-            <p class="plan__description plan__description--bits">
-              <span class="plan__bit">drzemka</span>
-            </p>
-          </div>
-        </article>
-        <article class="plan__item plan__item--meal">
-          <span class="plan__dot" aria-hidden="true"></span>
-          <time class="plan__time" datetime="14:00">14:00 - 15:00</time>
-          <div class="plan__card">
-            <p class="plan__description plan__description--bits">
-              <span class="plan__bit">zupka</span>
-              <span class="plan__bit">podwieczorek</span>
-              <span class="plan__bit">wspólne czytanie</span>
-            </p>
-          </div>
-        </article>
-        <article class="plan__item">
-          <span class="plan__dot" aria-hidden="true"></span>
-          <time class="plan__time" datetime="15:00">15:00-17:30</time>
-          <div class="plan__card">
-            <p class="plan__description plan__description--bits">
-              <span class="plan__bit">zabawa swobodna</span>
-              <span class="plan__bit">zajęcia popołudniowe</span>
-              <span class="plan__bit">rozchodzenie się dzieci do domu</span>
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
+
 
     <!--========== TERAPIA ==========-->
     <section class="terapia section bd-container" id="terapia">
@@ -656,9 +553,8 @@
             <a class="button button-link" target="_blank" href="https://maps.app.goo.gl/DYRCUcpJGinNbJj2A">Przeworska
               7/U7 04-382 Warszawa</a>
             <br /> oraz <br />
-            <!-- GBP (Drwęcka): https://share.google/rzGzcd2xASyopww1p -->
-            <a class="button button-link" target="_blank" href="https://share.google/rzGzcd2xASyopww1p">Drwęcka
-              18/U4 04-393 Warszawa</a>
+            <a class="button button-link" target="_blank" href="https://maps.app.goo.gl/Ks4oPvHGaEiGrowP6">Drwęcka
+              18/U4 Warszawa</a>
           </p>
         </div>
 
