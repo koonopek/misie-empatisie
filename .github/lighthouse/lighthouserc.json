@@ -1,0 +1,10 @@
+{
+  "ci": {
+    "collect": {
+      "settings": {
+        "comment": "Previews carry a noindex tag on purpose, which would otherwise fail the SEO category and hide real regressions.",
+        "skipAudits": ["is-crawlable"]
+      }
+    }
+  }
+}
