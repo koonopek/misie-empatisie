@@ -8,13 +8,24 @@
     content="Placówka Misie Empatisie przy ul. Przeworskiej 7/U7 w Warszawie. Informacje o kadrze, mapa dojazdu i galeria przedszkola oraz żłobka." />
   <meta name="keywords"
     content="Misie Empatisie Przeworska, przedszkole Przeworska, żłobek Przeworska, przedszkole Praga Południe, żłobek Warszawa" />
+  <link rel="canonical" href="https://misie-empatisie.pl/location-przeworska.html" />
   <meta property="og:title" content="Misie Empatisie - placówka Przeworska" />
   <meta property="og:description"
     content="Poznaj placówkę Misie Empatisie przy ul. Przeworskiej 7/U7: kadra, galeria i mapa dojazdu." />
-  <meta property="og:image" content="assets/img/misie_empatisie_logo.jpg" />
+  <meta property="og:image" content="https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg" />
+  <meta property="og:image:alt" content="Logo przedszkola i żłobka Misie Empatisie – placówka Przeworska" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="787" />
   <meta property="og:url" content="https://misie-empatisie.pl/location-przeworska.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pl_PL" />
+  <meta property="og:site_name" content="Misie Empatisie" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Misie Empatisie - placówka Przeworska" />
+  <meta name="twitter:description"
+    content="Poznaj placówkę Misie Empatisie przy ul. Przeworskiej 7/U7: kadra, galeria i mapa dojazdu." />
+  <meta name="twitter:image" content="https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,26 +59,104 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Preschool", "ChildCare"],
-      "name": "Misie Empatisie - Przeworska",
-      "url": "https://misie-empatisie.pl/location-przeworska.html",
-      "telephone": "+48606386598",
-      "email": "misie.empatisie@gmail.com",
-      "image": "https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Przeworska 7/U7",
-        "addressLocality": "Warszawa",
-        "addressRegion": "mazowieckie",
-        "postalCode": "04-382",
-        "addressCountry": "PL"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "07:30",
-        "closes": "17:30"
-      }
+      "@graph": [
+        {
+          "@type": ["Preschool", "ChildCare"],
+          "@id": "https://misie-empatisie.pl/location-przeworska.html#preschool",
+          "name": "Misie Empatisie - Przeworska",
+          "url": "https://misie-empatisie.pl/location-przeworska.html",
+          "telephone": "+48606386598",
+          "email": "misie.empatisie@gmail.com",
+          "image": "https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Przeworska 7/U7",
+            "addressLocality": "Warszawa",
+            "addressRegion": "mazowieckie",
+            "postalCode": "04-382",
+            "addressCountry": "PL"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 52.254886,
+            "longitude": 21.0812942
+          },
+          "parentOrganization": {
+            "@type": "Preschool",
+            "@id": "https://misie-empatisie.pl/#preschool",
+            "name": "Misie Empatisie - Niepubliczne Przedszkole i Żłobek",
+            "url": "https://misie-empatisie.pl"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "07:30",
+            "closes": "17:30"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://misie-empatisie.pl/location-przeworska.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Jak wygląda adaptacja w Misiach Empatisie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Adaptację planujemy indywidualnie, w tempie dziecka i w porozumieniu z rodzicami. Chcemy, żeby maluch poczuł się bezpiecznie, zanim zostanie z nami na dłużej. Szczegóły ustalamy przy zapisie: 606 386 598 lub misie.empatisie@gmail.com."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile wynosi czesne?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Przedszkole: 1700 zł miesięcznie. Żłobek: 2500 zł miesięcznie. Wpisowe: 800 zł jednorazowo. W czesnym są zajęcia dodatkowe: język angielski, rytmika, gordonki i zajęcia sensoryczne."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mogę skorzystać z programu Aktywny Rodzic?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Czesne żłobka wynosi 2500 zł. Program Aktywny Rodzic może pokryć do 1500 zł bonu. Dla uprawnionych rodzin koszt to ok. 1000 zł (2500 zł − do 1500 zł ≈ 1000 zł). Uprawnienia potwierdzamy przy zapisie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Co to znaczy, że pracujecie w duchu NVC?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "NVC (Porozumienie bez Przemocy) to sposób komunikacji oparty na uczuciach i potrzebach. Uczymy dzieci i siebie obserwować fakty bez ocen, nazywać emocje i szukać porozumienia zamiast kar i nagród."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "W jakich godzinach jest otwarta placówka?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Opieka od poniedziałku do piątku, w godzinach 7:30–17:30."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile macie placówek i gdzie się znajdują?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dwie lokalizacje na Pradze Południe: ta placówka przy ul. Przeworskiej 7/U7 (04-382 Warszawa) oraz ul. Drwęcka 18/U4 (04-393 Warszawa)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak się z wami skontaktować?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Zadzwoń: 606 386 598 lub napisz: misie.empatisie@gmail.com. Nie prowadzimy zapisów przez formularz online."
+              }
+            }
+          ]
+        }
+      ]
     }
   </script>
 </head>
@@ -320,6 +409,75 @@
         </div>
         <div class="offer__content offer__content--hidden" data-src="assets/img/gallery_7.jpg"
           data-pswp-width="1024" data-pswp-height="768" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="faq section bd-container" id="faq">
+      <h2 class="section-title">Najczęstsze pytania</h2>
+      <p class="faq__intro">
+        Adaptacja, czesne, program Aktywny Rodzic, NVC, godziny i kontakt do placówki przy ul. Przeworskiej.
+      </p>
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary>Jak wygląda adaptacja w Misiach Empatisie?</summary>
+          <p>
+            Adaptację planujemy indywidualnie, w tempie dziecka i w porozumieniu z rodzicami.
+            Chcemy, żeby maluch poczuł się bezpiecznie, zanim zostanie z nami na dłużej.
+            Szczegóły ustalamy przy zapisie: <a href="tel:+48606386598">606 386 598</a>
+            lub <a href="mailto:misie.empatisie@gmail.com">misie.empatisie@gmail.com</a>.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary>Ile wynosi czesne?</summary>
+          <p>
+            Przedszkole: 1700 zł miesięcznie. Żłobek: 2500 zł miesięcznie. Wpisowe: 800 zł jednorazowo.
+            W czesnym są zajęcia dodatkowe: język angielski, rytmika, gordonki i zajęcia sensoryczne.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary>Czy mogę skorzystać z programu Aktywny Rodzic?</summary>
+          <p>
+            Czesne żłobka wynosi 2500 zł. Program Aktywny Rodzic może pokryć do 1500 zł bonu.
+            Dla uprawnionych rodzin koszt to ok. 1000 zł
+            (<strong>2500 zł − do 1500 zł ≈ 1000 zł</strong>). Uprawnienia potwierdzamy przy zapisie.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary>Co to znaczy, że pracujecie w duchu NVC?</summary>
+          <p>
+            NVC (Porozumienie bez Przemocy) to sposób komunikacji oparty na uczuciach i potrzebach.
+            Uczymy dzieci i siebie obserwować fakty bez ocen, nazywać emocje i szukać porozumienia
+            zamiast kar i nagród.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary>W jakich godzinach jest otwarta placówka?</summary>
+          <p>Opieka od poniedziałku do piątku, w godzinach 7:30–17:30.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Ile macie placówek i gdzie się znajdują?</summary>
+          <p>
+            Dwie lokalizacje na Pradze Południe: ta placówka przy
+            <a href="location-przeworska.html">ul. Przeworskiej 7/U7 (04-382 Warszawa)</a>
+            oraz
+            <a href="location-drwecka.html">ul. Drwęcka 18/U4 (04-393 Warszawa)</a>.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary>Jak się z wami skontaktować?</summary>
+          <p>
+            Zadzwoń: <a href="tel:+48606386598">606 386 598</a>
+            lub napisz: <a href="mailto:misie.empatisie@gmail.com">misie.empatisie@gmail.com</a>.
+            Nie prowadzimy zapisów przez formularz online.
+          </p>
+        </details>
+      </div>
+      <div class="facility-cta">
+        <p>Chcesz zapisać dziecko? Zadzwoń lub napisz — bez formularza.</p>
+        <div class="facility-cta__links">
+          <a class="button" href="tel:+48606386598">606 386 598</a>
+          <a class="button" href="mailto:misie.empatisie@gmail.com">misie.empatisie@gmail.com</a>
+        </div>
       </div>
     </section>
 

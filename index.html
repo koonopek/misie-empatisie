@@ -14,20 +14,26 @@
     content="przedszkole Warszawa, żłobek Warszawa, przedszkole Praga Południe, żłobek Praga Południe, Misie Empatisie, NVC, Porozumienie bez Przemocy, bliskościowe przedszkole, niepubliczne przedszkole" />
 
   <!-- DODANE SOCIAL MEDIA META TAGS (Open Graph) -->
+  <link rel="canonical" href="https://misie-empatisie.pl/" />
   <meta property="og:title" content="Przedszkole i Żłobek Misie Empatisie - Warszawa Praga Południe" />
   <meta property="og:description"
     content="Bliskościowe przedszkole i żłobek w Warszawie. Placówki przy ul. Przeworskiej i Drwęckiej, opieka oparta na NVC, zdrowe żywienie i indywidualne podejście. Zapisy: 606 386 598" />
-  <meta property="og:image" content="assets/img/misie_empatisie_logo.jpg" />
-  <meta property="og:url" content="https://misie-empatisie.pl" />
+  <meta property="og:image" content="https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg" />
+  <meta property="og:image:alt" content="Logo przedszkola i żłobka Misie Empatisie na Pradze Południe" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="787" />
+  <meta property="og:url" content="https://misie-empatisie.pl/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pl_PL" />
+  <meta property="og:site_name" content="Misie Empatisie" />
 
   <!-- TWITTER CARDS -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Przedszkole i Żłobek Misie Empatisie - Warszawa" />
   <meta name="twitter:description"
     content="Bliskościowe przedszkole i żłobek w Warszawie na Pradze Południe. Dwie placówki, NVC, zdrowe żywienie, indywidualne podejście." />
-  <meta name="twitter:image" content="assets/img/misie_empatisie_logo.jpg" />
+  <meta name="twitter:image" content="https://misie-empatisie.pl/assets/img/misie_empatisie_logo.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -104,7 +110,7 @@
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 52.254886,
-        "longitude": 21.078719
+        "longitude": 21.0812942
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -137,23 +143,27 @@
       "department": [
         {
           "@type": "ChildCare",
+          "@id": "https://misie-empatisie.pl/location-przeworska.html#preschool",
           "name": "Misie Empatisie - Przeworska",
           "url": "https://misie-empatisie.pl/location-przeworska.html",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Przeworska 7/U7",
             "addressLocality": "Warszawa",
+            "postalCode": "04-382",
             "addressCountry": "PL"
           }
         },
         {
           "@type": "ChildCare",
+          "@id": "https://misie-empatisie.pl/location-drwecka.html#preschool",
           "name": "Misie Empatisie - Drwęcka",
           "url": "https://misie-empatisie.pl/location-drwecka.html",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Drwęcka 18/U4",
             "addressLocality": "Warszawa",
+            "postalCode": "04-393",
             "addressCountry": "PL"
           }
         }
@@ -380,11 +390,12 @@
 
           <div class="offering__circle__month">
             <img loading="lazy" src="assets/img/circle-background.webp" width="150" height="150"
-              alt="Oferta żłobek Warszawa - 2500 zł (obowiązuje aktualnie w żłobku)" />
-            <p class="offering__circle__month__text">
+              alt="Oferta żłobek Warszawa: 2500 zł minus do 1500 zł bon Aktywny Rodzic, około 1000 zł" />
+            <p class="offering__circle__month__text offering__circle__month__text--compact">
               Żłobek <br />
-              2500zł <br />
-              (-1500zł)
+              2500 zł <br />
+              − do 1500 zł <br />
+              ≈ 1000 zł
             </p>
           </div>
 
@@ -397,8 +408,18 @@
             </p>
           </div>
         </div>
+        <p class="offering__fees-note">
+          Czesne żłobka: <strong>2500 zł − do 1500 zł bon (program Aktywny Rodzic) ≈ 1000 zł</strong>
+          miesięcznie, jeśli przysługuje dofinansowanie. 2500 zł to pełne czesne;
+          bon do 1500 zł zależy od uprawnień w programie.
+        </p>
         <div class="offering__description">
           <ul class="offering__list">
+            <li>
+              Czesne żłobka wynosi 2500 zł. Przy programie Aktywny Rodzic można
+              otrzymać do 1500 zł bonu, więc dla uprawnionych rodzin koszt to
+              ok. 1000 zł (2500 zł − do 1500 zł ≈ 1000 zł).
+            </li>
             <li>Zapewniamy opiekę w godzinach 7:30-17:30</li>
             <li>
               Do każdego Dziecka podchodzimy bardzo indywidualnie,
@@ -552,8 +573,9 @@
             <a class="button button-link" target="_blank" href="https://maps.app.goo.gl/DYRCUcpJGinNbJj2A">Przeworska
               7/U7 04-382 Warszawa</a>
             <br /> oraz <br />
+            <!-- TODO: replace maps.app.goo.gl/Ks4oPvHGaEiGrowP6 (coords only) after Human verifies GBP -->
             <a class="button button-link" target="_blank" href="https://maps.app.goo.gl/Ks4oPvHGaEiGrowP6">Drwęcka
-              18/U4 Warszawa</a>
+              18/U4 04-393 Warszawa</a>
           </p>
         </div>
 
