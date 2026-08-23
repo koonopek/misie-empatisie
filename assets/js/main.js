@@ -17,7 +17,9 @@ function main() {
   showMenu("nav-toggle", "nav-menu");
 
   /*==================== REMOVE MENU MOBILE ====================*/
-  const navLink = document.querySelectorAll("a.nav__link");
+  const navLink = document.querySelectorAll(
+    "a.nav__link, a.terapia__nav-link, .terapia a[href^='#']",
+  );
   const dropdownToggles = document.querySelectorAll(".nav__dropdown-toggle");
 
   function closeDropdowns(exceptItem = null) {
