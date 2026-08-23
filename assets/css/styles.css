@@ -948,9 +948,9 @@ img {
 }
 
 .offering__fees-note {
-  max-width: 40rem;
-  margin: 0 auto var(--mb-3);
-  text-align: center;
+  max-width: none;
+  margin: 0 0 var(--mb-3);
+  text-align: left;
 }
 
 /*========== SEND GIFT ==========*/
