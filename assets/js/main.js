@@ -49,7 +49,7 @@ function main() {
 
   function getHeaderOffset() {
     const header = document.getElementById("header");
-    return (header?.offsetHeight || 0) + 24;
+    return (header?.offsetHeight || 0) + 56;
   }
 
   function scrollToSection(target) {

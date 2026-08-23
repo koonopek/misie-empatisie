@@ -58,6 +58,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 3.5rem);
 }
 
 body {
@@ -600,7 +601,7 @@ img {
 /*========== TERAPIA ==========*/
 .terapia,
 .terapia__card {
-  scroll-margin-top: calc(var(--header-height) + 2rem);
+  scroll-margin-top: calc(var(--header-height) + 3.5rem);
 }
 
 .terapia__intro {
@@ -704,9 +705,13 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  html {
+    scroll-padding-top: calc(var(--header-height) + 4.5rem);
+  }
+
   .terapia,
   .terapia__card {
-    scroll-margin-top: calc(var(--header-height) + 3rem);
+    scroll-margin-top: calc(var(--header-height) + 4.5rem);
   }
 }
 
