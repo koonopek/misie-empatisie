@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Wariant 2 · Miód — Misie Empatisie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #fff4e6;
+      --ink: #4a2e1c;
+      --muted: #7a5b45;
+      --caramel: #c56a28;
+      --caramel-deep: #8a4518;
+      --cream: #fffaf3;
+      --blush: #f6d3b0;
+      --leaf: #6e9444;
+      --line: #e7c7a4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Nunito", sans-serif;
+      line-height: 1.55;
+      background-color: var(--bg);
+      background-image: radial-gradient(#f0d2ae 1.1px, transparent 1.1px);
+      background-size: 18px 18px;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1100px, calc(100% - 36px)); margin: 0 auto; }
+    .tag-row { display: flex; justify-content: center; padding-top: 16px; }
+    .tag {
+      background: var(--ink);
+      color: #fff6ea;
+      font-family: "Fredoka", sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+
+    header {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 8px 8px 8px 12px;
+      background: var(--cream);
+      border: 3px solid var(--ink);
+      border-radius: 22px;
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+    .logo { display: flex; align-items: center; gap: 8px; }
+    .logo img { width: 62px; height: 62px; object-fit: contain; }
+    .logo strong { font-family: "Fredoka", sans-serif; font-size: 20px; line-height: 1; }
+    nav { display: flex; gap: 16px; margin-left: auto; font-weight: 800; }
+    nav a:hover { color: var(--caramel); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 16px;
+      border: 3px solid var(--ink);
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Fredoka", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      box-shadow: 4px 4px 0 var(--ink);
+      cursor: pointer;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+    .btn-fill { background: var(--caramel); color: #fffaf3; }
+    .btn-leaf { background: var(--leaf); color: #fff; }
+
+    .hero {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 18px;
+      align-items: center;
+      background: var(--cream);
+      border: 3px solid var(--ink);
+      border-radius: 32px;
+      padding: 28px;
+      box-shadow: 8px 8px 0 #e7b888;
+      position: relative;
+    }
+    .stamp {
+      position: absolute;
+      top: -14px;
+      left: 28px;
+      background: #f3c15b;
+      color: var(--ink);
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: "Fredoka", sans-serif;
+      transform: rotate(-3deg);
+    }
+    h1 {
+      margin: 18px 0 10px;
+      font-family: "Fredoka", sans-serif;
+      font-weight: 600;
+      font-size: clamp(36px, 4.6vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .lead { margin: 0 0 18px; color: var(--muted); font-size: 17px; max-width: 480px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-art {
+      background: #ffe7c4;
+      border: 3px solid var(--ink);
+      border-radius: 28px;
+      padding: 12px;
+    }
+    .hero-art img { width: 100%; border-radius: 18px; background: #fff8ee; }
+
+    section { padding: 34px 0 0; }
+    h2 {
+      margin: 0 0 6px;
+      font-family: "Fredoka", sans-serif;
+      font-size: 34px;
+      font-weight: 600;
+    }
+    .sub { margin: 0 0 16px; color: var(--muted); }
+
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card {
+      background: var(--cream);
+      border: 3px solid var(--ink);
+      border-radius: 24px;
+      padding: 18px 16px 16px;
+      box-shadow: 5px 5px 0 var(--blush);
+    }
+    .card img { width: 58px; height: 58px; object-fit: contain; background: #fff; border-radius: 16px; border: 2px solid var(--ink); padding: 4px; }
+    .card h3 { margin: 10px 0 4px; font-family: "Fredoka", sans-serif; font-size: 22px; font-weight: 600; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .ticket {
+      background: #fff;
+      border: 3px dashed var(--caramel);
+      border-radius: 20px;
+      padding: 16px;
+      text-align: center;
+    }
+    .ticket strong {
+      display: block;
+      font-family: "Fredoka", sans-serif;
+      font-size: 36px;
+      color: var(--caramel-deep);
+      line-height: 1;
+    }
+    .ticket span { color: var(--muted); font-weight: 700; }
+
+    .places { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .polaroid {
+      background: #fff;
+      border: 3px solid var(--ink);
+      border-radius: 8px 8px 22px 22px;
+      padding: 12px 12px 16px;
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+    .polaroid img { width: 100%; height: 180px; object-fit: cover; border-radius: 4px; }
+    .polaroid h3 { margin: 10px 0 0; font-family: "Fredoka", sans-serif; font-size: 26px; }
+    .polaroid p { margin: 2px 0 12px; color: var(--muted); }
+
+    .band {
+      margin: 28px 0 36px;
+      background: var(--caramel);
+      color: #fff8ef;
+      border: 3px solid var(--ink);
+      border-radius: 26px;
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+    .band h2 { margin: 0; color: #fff; }
+    .band p { margin: 4px 0 0; }
+    .band .btn { background: #fff6ea; }
+    .band .btn-leaf { background: #2f4a28; color: #fff; }
+    footer { text-align: center; color: var(--muted); font-size: 13px; padding-bottom: 28px; }
+
+    @media (max-width: 860px) {
+      nav { display: none; }
+      .hero, .cards, .prices, .places, .band { grid-template-columns: 1fr; }
+      .band { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="tag-row"><span class="tag">Wariant 2 · Miód</span></div>
+    <header>
+      <a class="logo" href="#top">
+        <img src="../assets/img/misie_empatisie_logo.webp" alt="Logo Misie Empatisie" />
+        <strong>Misie<br>Empatisie</strong>
+      </a>
+      <nav>
+        <a href="#o-nas">O nas</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#placowki">Placówki</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="btn btn-fill" href="tel:+48606386598">Zadzwoń</a>
+    </header>
+
+    <section class="hero" id="top">
+      <div>
+        <span class="stamp">NVC · Grochów</span>
+        <h1>Mały świat empatii, tuż za progiem</h1>
+        <p class="lead">Bliskościowe przedszkole i żłobek na Pradze Południe. Uczymy języka serca, dbamy o jedzenie i zostawiamy miejsce na wybór dziecka.</p>
+        <div class="actions">
+          <a class="btn btn-fill" href="#kontakt">Zapisz dziecko</a>
+          <a class="btn" href="#placowki">Zobacz placówki</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="../assets/img/giraffe-home.webp" alt="Ilustracja domu i żyraf" />
+      </div>
+    </section>
+
+    <section id="o-nas">
+      <h2>Co u nas słychać</h2>
+      <p class="sub">Ciepło, konkret i zero wyścigu.</p>
+      <div class="cards">
+        <article class="card">
+          <img src="../assets/img/giraffe-icon.webp" alt="" />
+          <h3>Porozumienie</h3>
+          <p>NVC na co dzień: fakty, uczucia, potrzeby. Nauczyciel jest mediatorem, nie sędzią.</p>
+        </article>
+        <article class="card">
+          <img src="../assets/img/closeness.webp" alt="" />
+          <h3>Bliskość</h3>
+          <p>Kameralnie, więc da się naprawdę poznać dziecko i być obok w trudniejszej chwili.</p>
+        </article>
+        <article class="card">
+          <img src="../assets/img/healthy-food.webp" alt="" />
+          <h3>Talerz</h3>
+          <p>Posiłki wybrane pod jakość. Zdrowe nawyki wchodzą przy stole, nie z plakatu.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="oferta">
+      <h2>Czesne</h2>
+      <p class="sub">Godziny 7:30–17:30. Angielski, rytmika i sensoryka w ramach opłaty.</p>
+      <div class="prices">
+        <article class="ticket"><span>Przedszkole</span><strong>1700 zł</strong><span>miesięcznie</span></article>
+        <article class="ticket"><span>Żłobek</span><strong>2500 zł</strong><span>miesięcznie</span></article>
+        <article class="ticket"><span>Wpisowe</span><strong>800 zł</strong><span>raz</span></article>
+      </div>
+    </section>
+
+    <section id="placowki">
+      <h2>Dwie placówki</h2>
+      <p class="sub">Wejdź dalej: kadra, galeria, dojazd.</p>
+      <div class="places">
+        <article class="polaroid">
+          <img src="../assets/img/przeworska_entry.webp" alt="Przeworska" />
+          <h3>Przeworska</h3>
+          <p>ul. Przeworska 7/U7</p>
+          <a class="btn btn-fill" href="../location-przeworska.html">Zobacz więcej</a>
+        </article>
+        <article class="polaroid">
+          <img src="../assets/img/drwecka_entry.webp" alt="Drwęcka" />
+          <h3>Drwęcka</h3>
+          <p>ul. Drwęcka 18/U4</p>
+          <a class="btn btn-leaf" href="../location-drwecka.html">Zobacz więcej</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="band" id="kontakt">
+      <div>
+        <h2>Masz pytanie?</h2>
+        <p>606 386 598 · misie.empatisie@gmail.com</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="tel:+48606386598">Zadzwoń</a>
+        <a class="btn btn-leaf" href="mailto:misie.empatisie@gmail.com">Napisz</a>
+      </div>
+    </section>
+    <footer>Propozycja wyglądu · nie zmienia jeszcze strony głównej</footer>
+  </div>
+</body>
+</html>
