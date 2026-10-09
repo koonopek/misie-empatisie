@@ -1,2 +1,6 @@
 assets/.DS_Store
 .DS_Store
+
+# Output of .github/scripts/build-preview.sh
+_site/
+.lighthouseci/

@@ -1,0 +1,98 @@
+name: PR preview
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+# Serialise per pull request, so the preview and its comment cannot end up
+# describing different commits when several pushes land in quick succession.
+concurrency: preview-${{ github.ref }}
+
+permissions:
+  contents: write # commit the preview into the branch that GitHub Pages serves
+  pages: read # poll the Pages build so the link works once it is posted
+  pull-requests: write # keep the sticky comment holding the preview link
+
+jobs:
+  preview:
+    name: Deploy preview
+    # Pull requests from forks get a read-only token and cannot deploy.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    outputs:
+      url: ${{ steps.deploy.outputs.preview-url }}
+      deployment-action: ${{ steps.deploy.outputs.deployment-action }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Assemble preview
+        if: github.event.action != 'closed'
+        run: .github/scripts/build-preview.sh _site
+
+      - name: Deploy preview
+        id: deploy
+        uses: rossjrw/pr-preview-action@ffa7509e91a3ec8dfc2e5536c4d5c1acdf7a6de9 # v1.8.1
+        with:
+          source-dir: _site
+          # The site is published from the root of main, so previews have to
+          # live there too, under their own directory.
+          preview-branch: main
+          umbrella-dir: pr-preview
+          pages-base-url: misie-empatisie.pl
+          wait-for-pages-deployment: true
+          action: auto
+
+  lighthouse:
+    name: Lighthouse
+    needs: preview
+    if: needs.preview.outputs.deployment-action == 'deploy'
+    runs-on: ubuntu-latest
+    # Scores measured on a shared runner are indicative only; they report, they
+    # never block a merge.
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      # Derived from the repository so that a new page is audited without
+      # anyone remembering to add it here.
+      - name: List preview pages
+        id: pages
+        env:
+          PREVIEW_URL: ${{ needs.preview.outputs.url }}
+        run: |
+          {
+            echo 'urls<<PAGES_EOF'
+            git ls-files '*.html' -- ':!:pr-preview/**' \
+              | sed -e 's|^index\.html$||' -e "s|^|${PREVIEW_URL}|"
+            echo 'PAGES_EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Audit preview
+        id: lighthouse
+        uses: treosh/lighthouse-ci-action@3e7e23fb74242897f95c0ba9cabad3d0227b9b18 # 12.6.2
+        with:
+          urls: ${{ steps.pages.outputs.urls }}
+          runs: 1
+          configPath: .github/lighthouse/lighthouserc.json
+          uploadArtifacts: true
+          artifactName: lighthouse-pr-${{ github.event.number }}
+
+      - name: Summarise scores
+        id: summary
+        env:
+          RESULTS_PATH: ${{ steps.lighthouse.outputs.resultsPath }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          {
+            echo 'body<<LIGHTHOUSE_EOF'
+            .github/scripts/lighthouse-summary.sh "$RESULTS_PATH/manifest.json" "$RUN_URL"
+            echo 'LIGHTHOUSE_EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Comment scores
+        uses: marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88 # v3.0.5
+        with:
+          header: lighthouse
+          message: ${{ steps.summary.outputs.body }}
