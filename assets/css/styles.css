@@ -777,6 +777,9 @@ img {
   flex-wrap: wrap;
   gap: 0.35rem 0.5rem;
   align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
   font-size: var(--small-font-size, 0.875rem);
   color: var(--text-color);
 }
