@@ -74,6 +74,7 @@ h1,
 h2,
 h3,
 ul,
+ol,
 p {
   margin: 0;
 }
@@ -89,7 +90,8 @@ h3 {
   color: var(--first-color-alt);
 }
 
-ul {
+ul,
+ol {
   padding: 0;
   list-style: none;
 }
