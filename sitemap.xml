@@ -12,4 +12,16 @@
     <loc>https://misie-empatisie.pl/location-drwecka.html</loc>
     <lastmod>2026-08-08</lastmod>
   </url>
+  <url>
+    <loc>https://misie-empatisie.pl/llms.txt</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://misie-empatisie.pl/llms-full.txt</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
 </urlset>
