@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-# LLM / answer-engine discovery files
-Allow: /llms.txt
-Allow: /llms-full.txt
-
 Sitemap: https://misie-empatisie.pl/sitemap.xml
