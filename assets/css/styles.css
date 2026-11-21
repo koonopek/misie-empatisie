@@ -74,6 +74,7 @@ h1,
 h2,
 h3,
 ul,
+ol,
 p {
   margin: 0;
 }
@@ -89,7 +90,8 @@ h3 {
   color: var(--first-color-alt);
 }
 
-ul {
+ul,
+ol {
   padding: 0;
   list-style: none;
 }
@@ -299,6 +301,11 @@ img {
 .nav__toggle {
   font-size: 1.3rem;
   cursor: pointer;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  line-height: 1;
+  color: var(--nav-color);
 }
 
 /* Show menu */
@@ -520,6 +527,10 @@ img {
 }
 
 .facility-map__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1rem;
   text-align: center;
   margin-top: var(--mb-3);
 }
@@ -734,46 +745,12 @@ img {
 .offer__content {
   position: relative;
   display: grid;
+  overflow: hidden;
   box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
   border-radius: 1rem;
   height: 12rem;
   width: auto;
-}
-
-#offer__content__image__1 {
-  background-image: url("../img/gallery_1_thumb.webp");
-  background-size: cover;
-  background-position: center;
-}
-
-#offer__content__image__2 {
-  background-image: url("../img/gallery_2_thumb.webp");
-  background-size: cover;
-  background-position: center;
-}
-
-#offer__content__image__3 {
-  background-image: url("../img/gallery_3_thumb.webp");
-  background-size: cover;
-  background-position: center;
-}
-
-#offer__content__image__4 {
-  background-image: url("../img/gallery_4_thumb.webp");
-  background-size: cover;
-  background-position: center;
-}
-
-#offer__content__image__5 {
-  background-image: url("../img/gallery_5_thumb.webp");
-  background-size: cover;
-  background-position: center;
-}
-
-#offer__content__image__6 {
-  background-image: url("../img/gallery_6_thumb.webp");
-  background-size: cover;
-  background-position: center;
+  padding: 0;
 }
 
 .gallery__note {
@@ -782,45 +759,64 @@ img {
   text-align: center;
 }
 
-.offer__content--drwecka {
-  background-size: cover;
-  background-position: center;
+.breadcrumbs {
+  padding-top: 0.75rem;
+  margin-bottom: 0;
 }
 
-#offer__content__drwecka__1 {
-  background-image: url("../img/drwecka_1_thumb.webp");
+.breadcrumbs + .facility-hero {
+  padding-top: 1.5rem;
 }
 
-#offer__content__drwecka__2 {
-  background-image: url("../img/drwecka_2_thumb.webp");
+@media screen and (min-width: 768px) {
+  .breadcrumbs {
+    padding-top: calc(var(--header-height) + 1.5rem);
+  }
 }
 
-#offer__content__drwecka__3 {
-  background-image: url("../img/drwecka_3_thumb.webp");
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: var(--small-font-size, 0.875rem);
+  color: var(--text-color);
 }
 
-#offer__content__drwecka__4 {
-  background-image: url("../img/drwecka_4_thumb.webp");
+.breadcrumbs__list li:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.5rem;
+  color: #9a9590;
 }
 
-#offer__content__drwecka__6 {
-  background-image: url("../img/drwecka_6_thumb.webp");
+.breadcrumbs__list a {
+  color: var(--nav-color, rgb(180, 113, 41));
+  font-weight: var(--font-semi-bold);
 }
 
-#offer__content__drwecka__7 {
-  background-image: url("../img/drwecka_7_thumb.webp");
+.breadcrumbs__list [aria-current="page"] {
+  color: var(--text-color);
 }
 
-#offer__content__drwecka__8 {
-  background-image: url("../img/drwecka_8_thumb.webp");
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  margin: 0 0 var(--mb-2);
 }
 
-#offer__content__drwecka__9 {
-  background-image: url("../img/drwecka_9_thumb.webp");
+.footer__nav a {
+  color: inherit;
+  font-weight: var(--font-semi-bold);
 }
 
-#offer__content__drwecka__10 {
-  background-image: url("../img/drwecka_10_thumb.webp");
+.footer__nav a:hover,
+.footer__nav a:focus-visible {
+  text-decoration: underline;
 }
 
 .offer__content--hidden {
@@ -832,8 +828,10 @@ img {
 }
 
 .offer__img {
-  width: auto;
+  display: block;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .offer__title,
@@ -1042,12 +1040,13 @@ img {
   }
 
   .offer__content {
-    padding: 0.5rem 1.5rem 1.5rem;
+    padding: 0;
   }
 
   .offer__img {
-    width: 120px;
-    margin-bottom: var(--mb-1);
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
   }
 
   .offer__title,
